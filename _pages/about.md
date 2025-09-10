@@ -32,7 +32,7 @@ Hi! I’m Hongbo Kang (康洪菠), a Ph.D. candidate at Tianjin University super
 # 📝 Publications 
 \* Co-first author, ✉️ Corresponding author.
 <!-- DyCrowd -->
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">TPAMI 2025</div><img src='../images/publications/DyCrowd.jpg' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">TPAMI</div><img src='../images/publications/DyCrowd.jpg' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [**DyCrowd: Towards Dynamic Crowd Reconstruction from a Large-scene Video**](https://arxiv.org/abs/2508.12644v1)
@@ -47,7 +47,7 @@ Hao Wen\*, **Hongbo Kang\***, Jian Ma, Jing Huang, Yuanwang Yang, Haozhe Lin, Yu
 
 
 <!-- RESCUE -->
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICCV 2025</div><img src='../images/publications/RESCUE.jpg' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICCV</div><img src='../images/publications/RESCUE.jpg' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [**RESCUE: Crowd Evacuation Simulation via Controlling SDM-United Characters**](https://arxiv.org/abs/2507.20117)
@@ -61,7 +61,7 @@ Xiaolin Liu\*, Tianyi Zhou\*, **Hongbo Kang**, Jian Ma, Ziwen Wang, Jing Huang, 
 </div>
 
 <!-- DC-GCT -->
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">TMM 2025</div><img src='../images/publications/dcgct.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">TMM</div><img src='../images/publications/dcgct.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [**Double-chain Graph Convolution Transformer for 3D Human Pose Estimation**](https://arxiv.org/abs/2308.05298)
@@ -75,7 +75,7 @@ Xiaolin Liu\*, Tianyi Zhou\*, **Hongbo Kang**, Jian Ma, Ziwen Wang, Jing Huang, 
 </div>
 
 <!-- DRPose -->
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICASSP 2024</div><img src='../images/publications/DRPose.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICASSP</div><img src='../images/publications/DRPose.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [**Diffusion-based Pose Refinement and Multi-Hypothesis Generation for 3D Human Pose Estimation**](https://arxiv.org/abs/2401.04921)
@@ -89,7 +89,7 @@ Xiaolin Liu\*, Tianyi Zhou\*, **Hongbo Kang**, Jian Ma, Ziwen Wang, Jing Huang, 
 </div>
 
 <!-- GLSTE -->
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">TMM 2023</div><img src='../images/publications/glste.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">TMM</div><img src='../images/publications/glste.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [**Global and local spatio-temporal encoder for 3D human pose estimation**](https://ieeexplore.ieee.org/abstract/document/10269070)

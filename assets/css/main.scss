@@ -2,8 +2,14 @@
 ---
 
 /*
- *    Minimal Mistakes Jekyll Theme
- *
+ *    Minimal Mistakes Jekyll .paper-box {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-bottom: 1px #efefef solid;
+    padding: 1em 0 1em 0;*
  *  - Michael Rose
  *  - mademistakes.com
  *  - https://twitter.com/mmistakes
@@ -46,6 +52,7 @@
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
+    border-bottom: 1px #efefef solid;
     padding: 0.5em 0 0.5em 0;
     
 
