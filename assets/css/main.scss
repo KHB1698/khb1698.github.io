@@ -46,8 +46,7 @@
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
-    border-bottom: 1px #efefef solid;
-    padding: 1em 0 1em 0;
+    padding: 0.5em 0 0.5em 0;
     
 
     .paper-box-image{
@@ -108,11 +107,37 @@ h1:before, .anchor:before {
     margin-top: .5em;
     margin-left: -.5em;
     color: white;
-    background-color: #00369f;
+    background-color: #08c;
     font-size: .8em;
 }
 
 .paper-abstract {
+  .expandable-abstract {
+    margin: 0.5em 0;
+  }
+  
+  .abstract-summary, .abstract-full {
+    font-weight: normal;
+  }
+  
+  .expand-btn, .collapse-btn {
+    cursor: pointer;
+    margin-left: 0.5em;
+    font-size: 0.8em;
+    color: #0066cc;
+    transition: transform 0.2s;
+    user-select: none;
+    
+    &:hover {
+      color: #004499;
+    }
+  }
+  
+  .abstract-full {
+    margin-top: 0.5em;
+  }
+  
+  // 保持原有的 details 样式以兼容其他地方
   details {
     margin: 0.5em 0;
   }
