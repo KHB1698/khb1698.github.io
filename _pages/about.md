@@ -40,10 +40,12 @@ Hi! I’m Hongbo Kang (康洪菠), a Ph.D. candidate at Tianjin University super
 Hao Wen\*, **Hongbo Kang\***, Jian Ma, Jing Huang, Yuanwang Yang, Haozhe Lin, Yu-Kun Lai, Kun Li✉️
 
 {% capture dycrowd_abs %}3D reconstruction of dynamic crowds in large scenes has become increasingly important for applications such as city surveillance and crowd analysis. However, current works attempt to reconstruct 3D crowds from a static image, causing a lack of temporal consistency and inability to alleviate the typical impact caused by occlusions. In this paper, we propose DyCrowd, the first framework for spatio-temporally consistent 3D reconstruction of hundreds of individuals' poses, positions and shapes from a large-scene video.{% endcapture %}
-<details class="paper-abstract">
-  <summary><strong>Abstract:</strong> {{ dycrowd_abs | strip | truncate: 200, '...' }}</summary>
-  <div>{{ dycrowd_abs | strip }}</div>
-</details>
+<div class="paper-abstract">
+  <details>
+    <summary><strong>Abstract:</strong> {{ dycrowd_abs | strip | truncate: 200, '...' }}</summary>
+    <div>{{ dycrowd_abs | strip }}</div>
+  </details>
+</div>
 
 IEEE Transactions on Pattern Analysis and Machine Intelligence, 2025 
 

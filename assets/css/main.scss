@@ -111,3 +111,39 @@ h1:before, .anchor:before {
     background-color: #00369f;
     font-size: .8em;
 }
+
+.paper-abstract {
+  details {
+    margin: 0.5em 0;
+  }
+
+  summary {
+    cursor: pointer;
+    font-weight: normal;
+    outline: none;
+    
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &::before {
+      content: "▶";
+      display: inline-block;
+      margin-right: 0.5em;
+      font-size: 0.8em;
+      transition: transform 0.2s;
+    }
+  }
+
+  details[open] {
+    summary::before {
+      transform: rotate(90deg);
+    }
+  }
+
+  details > div {
+    margin-top: 0.5em;
+    padding-left: 1.5em;
+    border-left: 2px solid #eee;
+  }
+}
