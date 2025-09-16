@@ -22,13 +22,13 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 # Site Author
 author:
   name             : "Hongbo Kang"
-  avatar           : "images/khb.jpg"
+  avatar           : ""
   bio              : "Ph.D candidate"
   location         : "Tianjin, China"
   employer         :
   pubmed           : 
   googlescholar    : "https://scholar.google.com.hk/citations?hl=zh-CN&user=QvDh5Q0AAAAJ"
-  email            : "hongbokang@tju.edu.cn"
+  email            : "hbkang@tju.edu.cn"
   researchgate     :  # e.g., "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
