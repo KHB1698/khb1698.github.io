@@ -2,8 +2,14 @@
 ---
 
 /*
- *    Minimal Mistakes Jekyll Theme
- *
+ *    Minimal Mistakes Jekyll .paper-box {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-bottom: 1px #efefef solid;
+    padding: 1em 0 1em 0;*
  *  - Michael Rose
  *  - mademistakes.com
  *  - https://twitter.com/mmistakes
@@ -47,7 +53,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     border-bottom: 1px #efefef solid;
-    padding: 2em 0 2em 0;
+    padding: 0.5em 0 0.5em 0;
     
 
     .paper-box-image{
@@ -68,17 +74,21 @@
     }
     
     @include breakpoint($medium) {
+        flex-wrap: nowrap; // 防止换行，确保左右布局
+        
         .paper-box-image{
             justify-content: left;
             min-width: 200px;
-            max-width: 40%;
+            flex-basis: 25%; // 精确控制宽度为20%
+            flex-shrink: 0; // 防止压缩
             order: 1;
         }
         
         .paper-box-text{
             justify-content: left;
             padding-left: 2em;
-            max-width: 60%;
+            flex-basis: calc(75% - 2em); // 考虑padding后的80%宽度
+            flex-grow: 1; // 允许增长填充剩余空间
             order: 2;
         }
 
@@ -104,6 +114,69 @@ h1:before, .anchor:before {
     margin-top: .5em;
     margin-left: -.5em;
     color: white;
-    background-color: #00369f;
+    background-color: #08c;
     font-size: .8em;
+}
+
+.paper-abstract {
+  .expandable-abstract {
+    margin: 0.5em 0;
+  }
+  
+  .abstract-summary, .abstract-full {
+    font-weight: normal;
+  }
+  
+  .expand-btn, .collapse-btn {
+    cursor: pointer;
+    margin-right: 0.5em;
+    font-size: 0.8em;
+    color: #08c;
+    transition: transform 0.2s;
+    user-select: none;
+    display: inline-block;
+    
+    &:hover {
+      color: #004499;
+    }
+  }
+  
+  .abstract-full {
+    margin-top: 0.5em;
+  }
+  
+  // 保持原有的 details 样式以兼容其他地方
+  details {
+    margin: 0.5em 0;
+  }
+
+  summary {
+    cursor: pointer;
+    font-weight: normal;
+    outline: none;
+    
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &::before {
+      content: "▶";
+      display: inline-block;
+      margin-right: 0.5em;
+      font-size: 0.8em;
+      transition: transform 0.2s;
+    }
+  }
+
+  details[open] {
+    summary::before {
+      transform: rotate(90deg);
+    }
+  }
+
+  details > div {
+    margin-top: 0.5em;
+    padding-left: 1.5em;
+    border-left: 2px solid #eee;
+  }
 }
