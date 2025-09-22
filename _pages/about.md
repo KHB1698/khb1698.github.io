@@ -133,7 +133,7 @@ Xinlin Yuan, Yong Wang, Yan Li, **Hongbo Kang**, Yu Chen, Boran Yang
 
 
 # 🎓 Academic Service
-- Reviewer: TMM, TCSVT, PR, MM, etc.
+- Reviewer: TMM, TCSVT, PR, ACMMM, etc.
 
 
 <!-- # 📖 Educations
