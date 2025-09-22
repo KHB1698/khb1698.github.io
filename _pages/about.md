@@ -32,7 +32,7 @@ Hi! I’m Hongbo Kang (康洪菠), a Ph.D. candidate at [Tianjin University](htt
 - ...
 
 # 📝 Publications 
-> \* Co-first author, ✉️ Corresponding author.
+\* Co-first author, ✉️ Corresponding author.
 <!-- DyCrowd -->
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">TPAMI</div><img src='../images/publications/DyCrowd.jpg' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
