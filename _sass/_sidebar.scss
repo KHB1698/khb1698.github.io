@@ -92,29 +92,32 @@
   }
 
   .avatar-wrapper {
-    position: relative;
-    display: inline-block;
+    position: relative !important;
+    display: inline-block !important;
+    width: 100% !important;
   }
 
   .avatar-greeting {
-    position: absolute;
-    bottom: -5px;
-    right: -10px;
-    background: #fff;
-    border: 2px solid #f2f3f3;
-    border-radius: 15px;
-    padding: 2px 6px;
-    font-size: 12px;
-    font-weight: bold;
-    color: #333;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 10;
+    position: absolute !important;
+    bottom: -5px !important;
+    right: -10px !important;
+    background: #fff !important;
+    border: 2px solid #f2f3f3 !important;
+    border-radius: 15px !important;
+    padding: 2px 6px !important;
+    font-size: 12px !important;
+    font-weight: bold !important;
+    color: #333 !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1) !important;
+    z-index: 999 !important;
+    white-space: nowrap !important;
+    pointer-events: none !important;
     
     @include breakpoint($large) {
-      bottom: 5px;
-      right: 5px;
-      font-size: 14px;
-      padding: 4px 8px;
+      bottom: 5px !important;
+      right: 5px !important;
+      font-size: 14px !important;
+      padding: 4px 8px !important;
     }
   }
 
@@ -122,11 +125,38 @@
     max-width: 175px;
     min-width: 75px;
     border-radius: 50%;
+    display: block !important;
 
     @include breakpoint($large) {
       padding: 5px;
       border: 1px solid $border-color;
     }
+  }
+}
+
+// 额外的高权重选择器确保样式不被覆盖
+.sidebar .author__avatar .avatar-greeting,
+.profile_box .author__avatar .avatar-greeting {
+  position: absolute !important;
+  bottom: -5px !important;
+  right: -10px !important;
+  background: #fff !important;
+  border: 2px solid #f2f3f3 !important;
+  border-radius: 15px !important;
+  padding: 2px 6px !important;
+  font-size: 12px !important;
+  font-weight: bold !important;
+  color: #333 !important;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1) !important;
+  z-index: 999 !important;
+  white-space: nowrap !important;
+  pointer-events: none !important;
+  
+  @include breakpoint($large) {
+    bottom: 5px !important;
+    right: 5px !important;
+    font-size: 14px !important;
+    padding: 4px 8px !important;
   }
 }
 
