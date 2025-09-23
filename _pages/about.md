@@ -22,7 +22,8 @@ My name is Hongbo Kang (康洪菠). I am a Ph.D. candidate at [Tianjin Universit
 
 <!-- Hi! I’m Hongbo Kang (康洪菠), a Ph.D. candidate at [Tianjin University](https://en.tju.edu.cn/) supervised by Prof. [Kun Li](https://cic.tju.edu.cn/faculty/likun/index.html). I also maintain a long-term research collaboration with Prof. [Yu-Kun Lai](https://users.cs.cf.ac.uk/Yukun.Lai/) from Cardiff University. My research focuses on 3D vision, specifically human-related motion reconstruction and generation. -->
 <!-- If you are seeking any form of academic collaboration, please contact me at [hbkang@tju.edu.cn](mailto:hbkang@tju.edu.cn). -->
-> 🕒 This page was last updated in Sep 2025.
+> Step by step, the longest road is conquered; act by act, the hardest task is accomplished.​
+<!-- 🕒 This page was last updated in Sep 2025. -->
 <!-- My research interest includes neural machine translation and computer vision. I have published more than 100 papers at the top international AI conferences with total <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'>google scholar citations <strong><span id='total_cit'>260000+</span></strong></a> (You can also use google scholar badge <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a>). -->
 
 
