@@ -60,6 +60,21 @@ $(document).ready(function(){
   // init smooth scroll
   $("a").smoothScroll({offset: -20});
 
+  // Avatar greeting click animation
+  $(".avatar-greeting").on("click", function() {
+    var $greeting = $(this);
+    // 移除已存在的动画类，防止重复添加
+    $greeting.removeClass("shake");
+    // 强制重排，确保类被移除
+    $greeting[0].offsetHeight;
+    // 添加动画类
+    $greeting.addClass("shake");
+    // 动画结束后移除类
+    setTimeout(function() {
+      $greeting.removeClass("shake");
+    }, 600);
+  });
+
   // add lightbox class to all image links
   $("a[href$='.jpg'],a[href$='.jpeg'],a[href$='.JPG'],a[href$='.png'],a[href$='.gif']").addClass("image-popup");
 
