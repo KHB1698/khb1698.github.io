@@ -132,7 +132,6 @@ Xinlin Yuan, Yong Wang, Yan Li, **Hongbo Kang**, Yu Chen, Boran Yang
 </div>
 </div>
 
-
 # 🎖 Honors and Awards
 - *2024.06* Outstanding Graduate Student of Chongqing (Top 1%)
 - *2023.10* National Scholarship (Top 1%)
