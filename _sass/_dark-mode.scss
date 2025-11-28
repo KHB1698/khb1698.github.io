@@ -172,6 +172,18 @@
     color: var(--text-color);
   }
 
+  // 修复社交图标颜色
+  .social-icons .fa {
+    color: var(--text-color) !important;
+  }
+
+  // GitHub等社交图标使用链接颜色
+  .social-icons .fa-github,
+  .social-icons .fa-github-alt,
+  .social-icons .fa-github-square {
+    color: var(--link-color) !important;
+  }
+
   .author__urls-wrapper button {
     background: var(--secondary-bg);
     color: var(--text-color);
