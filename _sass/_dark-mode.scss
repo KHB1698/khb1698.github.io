@@ -184,6 +184,11 @@
     color: var(--text-color) !important;
   }
 
+  // 地图标记图标使用链接颜色
+  .social-icons .fa-map-marker {
+    color: var(--link-color) !important;
+  }
+
   // GitHub等社交图标使用链接颜色
   .social-icons .fa-github,
   .social-icons .fa-github-alt,
