@@ -25,9 +25,9 @@ My research focuses on human-centered reconstruction and simulation, exploring d
 
 
 # 🔥 News
-- *2025.08*: &nbsp;🎉 Our paper "DyCrowd: Towards Dynamic Crowd Reconstruction from a Large-scene Video" has been accepted to ***TPAMI***!
+- *2025.08*: &nbsp;🎉 My paper "DyCrowd: Towards Dynamic Crowd Reconstruction from a Large-scene Video" has been accepted to ***TPAMI***!
 - *2025.07*: &nbsp;🎉 Our paper "RESCUE: Crowd Evacuation Simulation via Controlling SDM-United Characters" has been accepted to ***ICCV*** as <span style="color: red; font-weight: bold;">Highlight</span>!
-- *2025.05*: &nbsp;🎉 Our paper "Double-chain Graph Convolution Transformer for 3D Human Pose Estimation" has been accepted to ***TMM***!
+- *2025.05*: &nbsp;🎉 My paper "Double-chain Graph Convolution Transformer for 3D Human Pose Estimation" has been accepted to ***TMM***!
 - *2024.09*: &nbsp;📌 I started my Ph.D. in Prof. [Kun Li](https://cic.tju.edu.cn/faculty/likun/index.html)'s team at Tianjin University.
 - ...
 
