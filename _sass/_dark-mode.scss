@@ -30,6 +30,17 @@
 
 /* Apply dark mode styles */
 [data-theme="dark"] {
+  // 文字选中样式
+  ::selection {
+    background-color: #fff;
+    color: #000;
+  }
+  
+  ::-moz-selection {
+    background-color: #fff;
+    color: #000;
+  }
+
   body {
     background-color: var(--bg-color);
     color: var(--text-color);
@@ -61,10 +72,6 @@
   .paper-box {
     background-color: var(--bg-color);
     border-bottom: 1px solid var(--border-color);
-
-    &:hover {
-      background-color: var(--hover-bg);
-    }
 
     // 所有论文链接使用亮蓝色
     a {
