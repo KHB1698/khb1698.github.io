@@ -10,6 +10,24 @@
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
 </script>
 
+<!-- Dark mode initialization (load before CSS to prevent flash) -->
+<script>
+  (function() {
+    // Get system theme preference
+    function getSystemTheme() {
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        return 'dark';
+      }
+      return 'light';
+    }
+    
+    // Check for saved theme, fallback to system preference
+    const savedTheme = localStorage.getItem('theme');
+    const theme = savedTheme ? savedTheme : getSystemTheme();
+    document.documentElement.setAttribute('data-theme', theme);
+  })();
+</script>
+
 <!-- For all browsers -->
 <link rel="stylesheet" href="assets/css/main.css">
 

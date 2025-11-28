@@ -2,14 +2,8 @@
 ---
 
 /*
- *    Minimal Mistakes Jekyll .paper-box {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    border-bottom: 1px #efefef solid;
-    padding: 1em 0 1em 0;*
+ *    Minimal Mistakes Jekyll Theme
+ *
  *  - Michael Rose
  *  - mademistakes.com
  *  - https://twitter.com/mmistakes
@@ -45,6 +39,9 @@
 @import "vendor/font-awesome/brands";
 @import "vendor/magnific-popup/magnific-popup";
 @import "print";
+
+// Dark mode styles
+@import "dark-mode";
 
 .paper-box {
     display: flex;
@@ -126,6 +123,10 @@ h1:before, .anchor:before {
   
   .abstract-summary, .abstract-full {
     font-weight: normal;
+    padding: 0.8em 1em;
+    border-radius: 12px;
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
   }
   
   .expand-btn, .collapse-btn {

@@ -17,24 +17,17 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-<!-- Hi! I’m Hongbo Kang (康洪菠), a Ph.D. candidate at [Tianjin University](https://en.tju.edu.cn/) supervised by Prof. [Kun Li](https://cic.tju.edu.cn/faculty/likun/index.html). I also maintain a long-term research collaboration with Prof. [Yu-Kun Lai](https://users.cs.cf.ac.uk/Yukun.Lai/) from Cardiff University. I received my Master’s degree from Chongqing University of Technology, where I was jointly supervised by Prof. Yong Wang and Prof. [Wenming Yang](https://www.sigs.tsinghua.edu.cn/ywm/list.htm) from Tsinghua University. I completed my undergraduate studies at Jishou University. My research focuses on 3D vision, specifically human-related motion reconstruction and generation.  -->
+
 My name is Hongbo Kang (康洪菠). I am a Ph.D. candidate at [Tianjin University](https://en.tju.edu.cn/), advised by Prof. [Kun Li](https://cic.tju.edu.cn/faculty/likun/index.html). I also collaborate closely with Prof. [Yu-Kun Lai](https://users.cs.cf.ac.uk/Yukun.Lai/) at Cardiff University. 
 
 My research focuses on human-centered reconstruction and simulation, exploring data-driven methods for perception and decision-making of individuals and crowds. Specifically, it includes: individual and crowd reconstruction, crowd simulation and the construction of virtual crowd datasets, as well as closed-loop simulation of crowds in autonomous driving scenarios.
 
-<!-- I received my M.S. from Chongqing University of Technology, co-supervised by Prof. Yong Wang and Prof. [Wenming Yang](https://www.sigs.tsinghua.edu.cn/ywm/list.htm) (Tsinghua University), and my B.Eng. from Jishou University. My research lies in 3D computer vision, with an emphasis on human-centric motion reconstruction and generation. -->
-
-<!-- Hi! I’m Hongbo Kang (康洪菠), a Ph.D. candidate at [Tianjin University](https://en.tju.edu.cn/) supervised by Prof. [Kun Li](https://cic.tju.edu.cn/faculty/likun/index.html). I also maintain a long-term research collaboration with Prof. [Yu-Kun Lai](https://users.cs.cf.ac.uk/Yukun.Lai/) from Cardiff University. My research focuses on 3D vision, specifically human-related motion reconstruction and generation. -->
-<!-- If you are seeking any form of academic collaboration, please contact me at [hbkang@tju.edu.cn](mailto:hbkang@tju.edu.cn). -->
-<!-- > Step by step, the longest road is conquered; act by act, the hardest task is accomplished.​ -->
-<!-- 🕒 This page was last updated in Sep 2025. -->
-<!-- My research interest includes neural machine translation and computer vision. I have published more than 100 papers at the top international AI conferences with total <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'>google scholar citations <strong><span id='total_cit'>260000+</span></strong></a> (You can also use google scholar badge <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a>). -->
 
 
 # 🔥 News
-- *2025.08*: &nbsp;🎉 One paper accepted to TPAMI 2025.
-- *2025.07*: &nbsp;🎉 One paper accepted to ICCV 2025.
-- *2025.05*: &nbsp;🎉 One paper accepted to TMM 2025.
+- *2025.08*: &nbsp;🎉 Our paper "DyCrowd: Towards Dynamic Crowd Reconstruction from a Large-scene Video" has been accepted to ***TPAMI***!
+- *2025.07*: &nbsp;🎉 Our paper "RESCUE: Crowd Evacuation Simulation via Controlling SDM-United Characters" has been accepted to ***ICCV*** as <span style="color: red; font-weight: bold;">Highlight</span>!
+- *2025.05*: &nbsp;🎉 Our paper "Double-chain Graph Convolution Transformer for 3D Human Pose Estimation" has been accepted to ***TMM***!
 - *2024.09*: &nbsp;📌 I started my Ph.D. in Prof. [Kun Li](https://cic.tju.edu.cn/faculty/likun/index.html)'s team at Tianjin University.
 - ...
 
@@ -144,7 +137,7 @@ Xinlin Yuan, Yong Wang, Yan Li, **Hongbo Kang**, Yu Chen, Boran Yang
 
 
 
-# 🎖 Honors and Awards
+# 🎖 Awards
 - *2024.06* Outstanding Graduate Student of Chongqing (Top 1%)
 - *2023.10* National Scholarship (Top 1%)
 

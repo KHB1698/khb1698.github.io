@@ -1,0 +1,328 @@
+/* ==========================================================================
+   Dark Mode Styles
+   ========================================================================== */
+
+/* Dark mode color variables */
+:root {
+  --bg-color: #fff;
+  --text-color: #52565e;
+  --card-bg: #fff;
+  --border-color: #f2f3f3;
+  --code-bg: #fafafa;
+  --link-color: #08c;
+  --masthead-bg: #fff;
+  --sidebar-bg: #fff;
+}
+
+[data-theme="dark"] {
+  --bg-color: #0f172a;
+  --text-color: #c9d1d9;
+  --card-bg: #0f172a;
+  --border-color: #334155;
+  --code-bg: #334155;
+  --link-color: #08c;
+  --link-hover-color: #0099cc;
+  --masthead-bg: #0f172a;
+  --sidebar-bg: #0f172a;
+  --secondary-bg: #334155;
+  --hover-bg: #334155;
+}
+
+/* Apply dark mode styles */
+[data-theme="dark"] {
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+
+  .masthead {
+    background-color: var(--masthead-bg);
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .sidebar {
+    background-color: var(--sidebar-bg);
+    border-right: none;
+  }
+
+  .author__avatar img {
+    border: 2px solid var(--border-color);
+  }
+
+  .page {
+    background-color: var(--bg-color);
+  }
+
+  .page__content {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+
+  .paper-box {
+    background-color: var(--bg-color);
+    border-bottom: 1px solid var(--border-color);
+
+    &:hover {
+      background-color: var(--hover-bg);
+    }
+
+    // 所有论文链接使用亮蓝色
+    a {
+      color: #08c !important;
+      
+      &:hover {
+        color: #0099cc !important;
+      }
+
+      strong {
+        color: #08c !important;
+      }
+    }
+  }
+
+  // 论文标题链接使用亮蓝色
+  .paper-box-text {
+    background-color: transparent;
+
+    a {
+      color: #08c !important;
+      
+      &:hover {
+        color: #0099cc !important;
+      }
+
+      strong {
+        color: #08c !important;
+      }
+    }
+  }
+
+  .paper-box-image img {
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+  }
+
+  a {
+    color: var(--link-color);
+
+    &:hover {
+      color: var(--link-hover-color);
+    }
+  }
+
+  code {
+    background-color: var(--code-bg);
+    color: var(--text-color);
+  }
+
+  pre {
+    background-color: var(--code-bg);
+    border: 1px solid var(--border-color);
+  }
+
+  .greedy-nav {
+    background: var(--masthead-bg);
+    
+    a {
+      color: var(--text-color);
+      
+      &:hover {
+        color: var(--link-color);
+      }
+    }
+
+    button {
+      background: transparent;
+      
+      .navicon,
+      .navicon:before,
+      .navicon:after {
+        background: var(--text-color);
+      }
+    }
+  }
+
+  .hidden-links {
+    background: var(--secondary-bg);
+    border: 1px solid var(--border-color);
+
+    a {
+      color: var(--text-color);
+
+      &:hover {
+        background: var(--hover-bg);
+      }
+    }
+  }
+
+  .author__urls {
+    background: var(--sidebar-bg);
+    border: none;
+    box-shadow: none;
+
+    &:before {
+      border-bottom-color: transparent;
+    }
+  }
+
+  .author__name {
+    color: var(--text-color);
+  }
+
+  .author__bio {
+    color: var(--text-color);
+  }
+
+  .author__urls-wrapper button {
+    background: var(--secondary-bg);
+    color: var(--text-color);
+    border: none;
+
+    &:hover {
+      background: var(--hover-bg);
+    }
+  }
+
+  .abstract-summary,
+  .abstract-full {
+    background-color: #334155 !important;
+    border: 1px solid var(--border-color) !important;
+    color: var(--text-color) !important;
+    padding: 0.8em 1em;
+    border-radius: 12px;
+  }
+
+  .badge {
+    background-color: var(--link-color);
+    color: #fff;
+  }
+
+  .expand-btn,
+  .collapse-btn {
+    color: var(--link-color);
+
+    &:hover {
+      color: var(--link-hover-color);
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--text-color);
+  }
+
+  strong {
+    color: var(--text-color);
+  }
+
+  // Tables
+  table {
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+
+    thead {
+      background-color: var(--secondary-bg);
+      color: var(--text-color);
+    }
+
+    tbody tr {
+      border-bottom: 1px solid var(--border-color);
+
+      &:hover {
+        background-color: var(--hover-bg);
+      }
+    }
+  }
+
+  // Form elements
+  input,
+  textarea,
+  select {
+    background-color: var(--secondary-bg);
+    border-color: var(--border-color);
+    color: var(--text-color);
+
+    &:focus {
+      border-color: var(--link-color);
+    }
+  }
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--card-bg);
+  border: 2px solid var(--border-color);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 0;
+  outline: none;
+
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+    fill: var(--text-color);
+    transition: fill 0.3s ease;
+  }
+
+  .sun-icon {
+    display: none;
+  }
+
+  .moon-icon {
+    display: block;
+  }
+
+  // Mobile responsive
+  @media (max-width: 768px) {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 45px;
+    height: 45px;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+[data-theme="dark"] .theme-toggle {
+  .sun-icon {
+    display: block;
+  }
+
+  .moon-icon {
+    display: none;
+  }
+}
+
+/* Smooth transitions */
+*,
+*::before,
+*::after {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+// Disable transitions for theme toggle button to make it feel more responsive
+.theme-toggle,
+.theme-toggle * {
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
