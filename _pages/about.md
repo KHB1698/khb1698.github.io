@@ -25,6 +25,7 @@ My research focuses on ***human-centered reconstruction and simulation***, explo
 
 
 # 🔥 News
+- *2025.12*: &nbsp;🎉 Our paper "DBMambaPose: Decoupled Spatial-Temporal Bidirectional State Space Model for Efficient 3D Human Pose Estimation" has been accepted to ***PR***!
 - *2025.08*: &nbsp;🎉 My paper "DyCrowd: Towards Dynamic Crowd Reconstruction from a Large-scene Video" has been accepted to ***TPAMI***!
 - *2025.07*: &nbsp;🎉 Our paper "RESCUE: Crowd Evacuation Simulation via Controlling SDM-United Characters" has been accepted to ***ICCV*** as <span style="color: red; font-weight: bold;">Highlight</span>!
 - *2025.05*: &nbsp;🎉 My paper "Double-chain Graph Convolution Transformer for 3D Human Pose Estimation" has been accepted to ***TMM***!
@@ -32,7 +33,8 @@ My research focuses on ***human-centered reconstruction and simulation***, explo
 - ...
 
 # 📝 Publications 
-\* Co-first author, ✉️ Corresponding author.
+<!-- \* Co-first author, ✉️ Corresponding author. -->
+- **🌟 Selected Publications**
 <!-- DyCrowd -->
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">TPAMI</div><img src='../images/publications/DyCrowd.jpg' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
@@ -104,20 +106,43 @@ Yong Wang\*, **Hongbo Kang\*✉️**, Doudou Wu, Wenming Yang, Longbin Zhang
 </div>
 </div>
 
+
+- **🌟 Collaborative Publications** 
+<!-- \* Co-first author, ✉️ Corresponding author. -->
+
+<!-- DBMambaPose -->
+<!-- <div class='paper-box'><div class='paper-box-image'><div><div class="badge">PR</div><img src='../images/publications/DBMambaPose.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1"> -->
+<div class='paper-box'>
+<div markdown="1">
+[**DBMambaPose: Decoupled Spatial-Temporal Bidirectional State Space Model for Efficient 3D Human Pose Estimation**]()
+
+Xiaoqing Wang\*, Yong Wang\*, Xuguang Liu, **Hongbo Kang**, Wenming Yang✉️
+
+{% include expandable_abstract.html abstract="Transformer-based 3D human pose estimation (HPE) methods face efficiency-accuracy trade-offs due to self-attention’s quadratic complexity. While State Space Models (SSMs) offer linear complexity and strong long-range modeling, direct Mamba adaptation to video-based 3D HPE is suboptimal, as unidirectional SSMs poorly capture spatio-temporal context. To address this, we propose DBMambaPose, a novel attention-free 3D HPE architecture based on SSMs. Its core DBMambaPose Block alternately stacks Spatial Disentangled Bidirectional Mamba Block (S-DBMB) for intra-frame joint spatial dependencies and Temporal Disentangled Bidirectional Mamba Block (T-DBMB) for inter-frame joint motion trajectories. We further introduce a Decoupled Spatial-Temporal Bidirectional Scanning mechanism (DST-BS) to enable frame-ordered spatial bidirectional processing and joint-ordered temporal bidirectional processing, enhancing fine-grained spatio-temporal feature modeling. Four DBMambaPose variants provide flexible accuracy-efficiency trade-offs. Experiments on Human3.6M and MPI-INF-3DHP show DBMambaPose achieves state-of-the-art performance with reduced computational costs." %} 
+
+***Pattern Recognition*** , 2026 [**\[Code\]**](https://github.com/camelliawxq/DBMambaPose)
+</div>
+</div>
+
 <!-- ICFNet -->
+<!-- <div class='paper-box'><div class='paper-box-image'><div><div class="badge">Neurocomputing</div><img src='../images/publications/ICFNet.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1"> -->
 <div class='paper-box'>
 <div markdown="1">
 [**ICFNet: Interactive-complementary fusion network for monocular 3D human pose estimation**](https://www.sciencedirect.com/science/article/abs/pii/S0925231224017181)
 
-Yong Wang, Peng Liu, **Hongbo Kang**, Doudou Wu, Duoqian Miao
+Yong Wang\*, Peng Liu\*✉️, **Hongbo Kang**, Doudou Wu, Duoqian Miao
 
 {% include expandable_abstract.html abstract="Most existing methods for 3D human pose estimation from monocular images focus on learning the spatial correlation of either the global or local joints of the human body but fail to adequately capture the inherent dependencies between them. To address this limitation, we propose the Interactive Complementary Fusion Network (ICFNet), an algorithm designed to fully utilize the prior knowledge of both global and local joint relationships to enhance prediction performance. Specifically, we introduce two feature capturers: the Global Knowledge Prior Capturer (GKPC) and the Local Region Subject Capturer (LRSC), which respectively capture global body knowledge and local joint information. Additionally, we propose three joint constraint mechanisms to express the potential association dependencies between global and local joints, which are further modeled using two association capturers: the Refined-Regression Association Capture Module (RR-ACM) and the Generalized-Guidance Association Capture Module (GG-ACM). Moreover, we introduce a novel feature transformation module, the Link Conversion Module (LCM), to transform and augment pose features. The algorithm adopts a complementary process to enhance the interaction and fusion of global and local feature information by gradually imposing constraints on the physical topological features of the human body, thereby improving its modeling capabilities. Extensive experiments demonstrate that our proposed ICFNet achieves state-of-the-art results on two challenging benchmark datasets: Human 3.6M and MPI-INF-3DHP." %}
 
-***Neurocomputing***, 2025
+***Neurocomputing***, 2025 [**\[Code\]**](https://github.com/PENG-LAU/ICFNet)
 </div>
 </div>
 
-<!-- HIN -->
+<!-- HFL -->
+<!-- <div class='paper-box'><div class='paper-box-image'><div><div class="badge">DCN</div><img src='../images/publications/HFL.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1"> -->
 <div class='paper-box'>
 <div markdown="1">
 [**Hierarchical flow learning for low-light image enhancement**](https://www.sciencedirect.com/science/article/pii/S2352864824001585)
@@ -144,7 +169,7 @@ Xinlin Yuan, Yong Wang, Yan Li, **Hongbo Kang**, Yu Chen, Boran Yang
 
 # 🎓 Academic Service
 - **Journal Reviewer**: TMM, TCSVT, PR, etc.
-- **Conference Reviewer**: ICCV, ACM MM, etc.
+- **Conference Reviewer**: ACM MM, etc.
 
 
 <!-- # 📖 Educations
