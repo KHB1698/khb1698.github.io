@@ -34,7 +34,7 @@ My research focuses on ***human-centered reconstruction and simulation***, explo
 
 # 📝 Publications 
 <!-- \* Co-first author, ✉️ Corresponding author. -->
-- **🌟 Selected Publications**
+- **Selected Publications**
 <!-- DyCrowd -->
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">TPAMI</div><img src='../images/publications/DyCrowd.jpg' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
@@ -107,7 +107,7 @@ Yong Wang\*, **Hongbo Kang\*✉️**, Doudou Wu, Wenming Yang, Longbin Zhang
 </div>
 
 
-- **🌟 Collaborative Publications** 
+- **Collaborative Publications** 
 <!-- \* Co-first author, ✉️ Corresponding author. -->
 
 <!-- DBMambaPose -->
