@@ -25,6 +25,7 @@ My research focuses on ***human-centered reconstruction and simulation***, explo
 
 
 # 🔥 News
+- *2025.12*: &nbsp;🎉 I am honored to be selected for CAST Youth Science and Technology Talent Cultivation Project Doctoral Student Special Program!
 - *2025.12*: &nbsp;🎉 Our paper "DBMambaPose: Decoupled Spatial-Temporal Bidirectional State Space Model for Efficient 3D Human Pose Estimation" has been accepted to ***PR***!
 - *2025.08*: &nbsp;🎉 My paper "DyCrowd: Towards Dynamic Crowd Reconstruction from a Large-scene Video" has been accepted to ***TPAMI***!
 - *2025.07*: &nbsp;🎉 Our paper "RESCUE: Crowd Evacuation Simulation via Controlling SDM-United Characters" has been accepted to ***ICCV*** as <span style="color: red; font-weight: bold;">Highlight</span>!
@@ -163,6 +164,7 @@ Xinlin Yuan, Yong Wang, Yan Li, **Hongbo Kang**, Yu Chen, Boran Yang
 
 
 # 🎖 Awards
+- *2025.12* CAST Youth Science and Technology Talent Cultivation Project Doctoral Student Special Program
 - *2024.06* Outstanding Graduate Student of Chongqing (Top 1%)
 - *2023.10* National Scholarship (Top 1%)
 
