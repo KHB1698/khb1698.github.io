@@ -167,6 +167,7 @@ Xinlin Yuan, Yong Wang, Yan Li, **Hongbo Kang**, Yu Chen, Boran Yang
 - *2025.12* CAST Youth Science and Technology Talent Cultivation Project Doctoral Student Special Program
 - *2024.06* Outstanding Graduate Student of Chongqing (Top 1%)
 - *2023.10* National Scholarship (Top 1%)
+- *2021.10* PaddlePaddle Developers Experts (PPDE) [**\[AI Studio\]**](https://aistudio.baidu.com/personalcenter/thirdview/791590)
 
 
 # 🎓 Academic Service
