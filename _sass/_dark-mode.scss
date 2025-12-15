@@ -67,6 +67,15 @@
   .page__content {
     background-color: var(--bg-color);
     color: var(--text-color);
+
+    // 确保所有链接使用正确的链接颜色
+    a {
+      color: var(--link-color) !important;
+
+      &:hover {
+        color: var(--link-hover-color) !important;
+      }
+    }
   }
 
   .paper-box {
@@ -113,6 +122,15 @@
 
     &:hover {
       color: var(--link-hover-color);
+    }
+  }
+
+  // 确保列表中的链接也使用链接颜色
+  li a {
+    color: var(--link-color) !important;
+
+    &:hover {
+      color: var(--link-hover-color) !important;
     }
   }
 
@@ -235,6 +253,11 @@
 
   strong {
     color: var(--text-color);
+  }
+
+  // 确保链接中的 strong 标签使用链接颜色
+  a strong {
+    color: var(--link-color) !important;
   }
 
   // Tables
