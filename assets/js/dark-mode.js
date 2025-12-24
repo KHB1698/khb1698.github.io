@@ -4,23 +4,33 @@
 
   // Function to get system theme preference
   function getSystemTheme() {
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      return 'dark';
-    }
-    return 'light';
+    const isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    console.log('[Dark Mode Debug] System preference:', isDark ? 'dark' : 'light');
+    return isDark ? 'dark' : 'light';
   }
 
   // Check for saved theme preference, fallback to system preference
   function getInitialTheme() {
     const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-      return savedTheme;
+    const systemTheme = getSystemTheme();
+    
+    console.log('[Dark Mode Debug] Saved theme in localStorage:', savedTheme);
+    console.log('[Dark Mode Debug] System theme:', systemTheme);
+    
+    // 每次打开都优先使用系统主题
+    // 如果 localStorage 中保存的主题与系统不一致，清除旧的保存
+    if (savedTheme && savedTheme !== systemTheme) {
+      console.log('[Dark Mode Debug] Saved theme differs from system, clearing saved theme');
+      localStorage.removeItem('theme');
     }
-    return getSystemTheme();
+    
+    console.log('[Dark Mode Debug] Using system theme:', systemTheme);
+    return systemTheme;
   }
 
   // Apply theme on page load
   const currentTheme = getInitialTheme();
+  console.log('[Dark Mode Debug] Applying theme:', currentTheme);
   document.documentElement.setAttribute('data-theme', currentTheme);
 
   // Wait for DOM to be ready
