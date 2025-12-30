@@ -171,7 +171,7 @@ Xinlin Yuan, Yong Wang, Yan Li, **Hongbo Kang**, Yu Chen, Boran Yang
 
 
 # 🎓 Academic Service
-- **Journal Reviewer**: TMM, TCSVT, PR, etc.
+- **Journal Reviewer**: IJCV, TMM, TCSVT, PR, etc.
 - **Conference Reviewer**: ACM MM, etc.
 
 
