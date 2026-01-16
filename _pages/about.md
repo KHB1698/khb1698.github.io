@@ -25,6 +25,7 @@ My research focuses on ***human-centered reconstruction and simulation***, explo
 
 
 # 🔥 News
+- *2026.01*: &nbsp;🎉 Our paper "DRPose: A Diffusion-based Pose Refinement Framework for 3D Human Pose Estimation" has been accepted to ***TCSVT***!
 - *2025.12*: &nbsp;🎉 I am honored to be selected for CAST Youth Science and Technology Talent Cultivation Project Doctoral Student Special Program!
 - *2025.12*: &nbsp;🎉 Our paper "DBMambaPose: Decoupled Spatial-Temporal Bidirectional State Space Model for Efficient 3D Human Pose Estimation" has been accepted to ***PR***!
 - *2025.08*: &nbsp;🎉 My paper "DyCrowd: Towards Dynamic Crowd Reconstruction from a Large-scene Video" has been accepted to ***TPAMI***!
@@ -34,8 +35,24 @@ My research focuses on ***human-centered reconstruction and simulation***, explo
 - ...
 
 # 📝 Publications 
-<!-- \* Co-first author, ✉️ Corresponding author. -->
-- **Selected Publications**
+
+- **Selected Publications** (\* Co-first author, ✉️ Corresponding author)
+
+<!-- DyCrowd -->
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">TCSVT</div><img src='../images/publications/drpose1.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[**DRPose: A Diffusion-based Pose Refinement Framework for 3D Human Pose Estimation**]()
+
+Yong Wang\*, Xuguang Liu\*, Xiaoqing Wang, Doudou Wu, Wenming Yang, **Hongbo Kang**✉️
+
+{% include expandable_abstract.html abstract="Recently, two-stage 3D human pose estimation using monocular cameras has gained significant attention. However, the inherent uncertainty in the upscaling process from 2D to 3D often compromises the accuracy of deterministic methods. To address this, we propose a novel diffusion-based refinement framework (DRPose) which models the uncertainty during the upscaling process by introducing stochastic noise to the initially predicted 3D poses. This approach facilitates the generation of more realistic predictions through iterative refinement with multiple noise samples, ultimately producing multi-hypothesis predictions that better align with ground truth. Our framework incorporates two key components: a Graph Convolution Transformer module (SGCT), which integrates scaling and displacement adjustments based on conditional information with a joint temporal-spatial feature separation mechanism, and a Pose Refinement Module (PRM), which balances the initial and refined poses. This design allows DRPose to effectively refine pose estimation for both individual frames and sequential data. Furthermore, our framework establishes new benchmarks for performance in both frame2frame and seq2frame scenarios. Extensive experiments demonstrate that our method achieves state-of-the-art performance on the Human3.6M and MPI-INF-3DHP datasets. Notably, when applied to the current state-of-the-art single-frame 3D pose extractor, our multi-hypothesis optimization achieves an 18.8% reduction in Mean Per Joint Position Error (MPJPE) and a 16.9% reduction in Procrustes MPJPE (P-MPJPE)." %}
+
+***IEEE Transactions on Circuits and Systems for Video Technology***, 2026 [**\[Code\]**](https://github.com/KHB1698/DRPose) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
+</div>
+</div>
+
+
 <!-- DyCrowd -->
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">TPAMI</div><img src='../images/publications/DyCrowd.jpg' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
@@ -108,15 +125,15 @@ Yong Wang\*, **Hongbo Kang\*✉️**, Doudou Wu, Wenming Yang, Longbin Zhang
 </div>
 
 
-- **Collaborative Publications** 
-<!-- \* Co-first author, ✉️ Corresponding author. -->
+- **Other Publications** 
+<!-- \* Co-first author, ✉️ Corresponding author -->
 
 <!-- DBMambaPose -->
 <!-- <div class='paper-box'><div class='paper-box-image'><div><div class="badge">PR</div><img src='../images/publications/DBMambaPose.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1"> -->
 <div class='paper-box'>
 <div markdown="1">
-[**DBMambaPose: Decoupled Spatial-Temporal Bidirectional State Space Model for Efficient 3D Human Pose Estimation**]()
+<span class="badge badge-inline">PR</span> [**DBMambaPose: Decoupled Spatial-Temporal Bidirectional State Space Model for Efficient 3D Human Pose Estimation**]()
 
 Xiaoqing Wang\*, Yong Wang\*, Xuguang Liu, **Hongbo Kang**, Wenming Yang✉️
 
@@ -131,7 +148,7 @@ Xiaoqing Wang\*, Yong Wang\*, Xuguang Liu, **Hongbo Kang**, Wenming Yang✉️
 <div class='paper-box-text' markdown="1"> -->
 <div class='paper-box'>
 <div markdown="1">
-[**ICFNet: Interactive-complementary fusion network for monocular 3D human pose estimation**](https://www.sciencedirect.com/science/article/abs/pii/S0925231224017181)
+<span class="badge badge-inline">Neurocomputing</span> [**ICFNet: Interactive-complementary fusion network for monocular 3D human pose estimation**](https://www.sciencedirect.com/science/article/abs/pii/S0925231224017181)
 
 Yong Wang\*, Peng Liu\*✉️, **Hongbo Kang**, Doudou Wu, Duoqian Miao
 
@@ -146,7 +163,7 @@ Yong Wang\*, Peng Liu\*✉️, **Hongbo Kang**, Doudou Wu, Duoqian Miao
 <div class='paper-box-text' markdown="1"> -->
 <div class='paper-box'>
 <div markdown="1">
-[**Hierarchical flow learning for low-light image enhancement**](https://www.sciencedirect.com/science/article/pii/S2352864824001585)
+<span class="badge badge-inline">DCN</span> [**Hierarchical flow learning for low-light image enhancement**](https://www.sciencedirect.com/science/article/pii/S2352864824001585)
 
 Xinlin Yuan, Yong Wang, Yan Li, **Hongbo Kang**, Yu Chen, Boran Yang
 
