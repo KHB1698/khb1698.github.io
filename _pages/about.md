@@ -207,7 +207,7 @@ Xinlin Yuan, Yong Wang, Yan Li, **Hongbo Kang**, Yu Chen, Boran Yang
 
 <div class='paper-box'>
 <div style="width: 400px; margin: 20px auto; transform: scale(0.8);">
-<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=a&t=tt&d=2olqXOZJM4rIl9TMPkMp7LhhCme2cAS84jr3abw_DjY&co=2d78ad&cmo=3acc3a&cmn=ff5353&ct=ffffff'></script>
+<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=m&d=2olqXOZJM4rIl9TMPkMp7LhhCme2cAS84jr3abw_DjY'></script>
 </div>
 </div>
 
