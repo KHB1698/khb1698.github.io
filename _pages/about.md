@@ -25,6 +25,7 @@ My research focuses on ***human-centered reconstruction and simulation***, explo
 
 
 # 🔥 News
+- *2026.05*: &nbsp;🎉 My paper "Crowd4D: Scene-Aware Monocular 4D Crowd Reconstruction" has been accepted to ***ICML***!
 - *2026.02*: &nbsp;🎉 Our paper "MuRE: Multi-Relationship Encoder for 3D Human Pose Estimation" has been accepted to ***CVIU***!
 - *2026.01*: &nbsp;🎉 Our paper "DRPose: A Diffusion-based Pose Refinement Framework for 3D Human Pose Estimation" has been accepted to ***TCSVT***!
 - *2025.12*: &nbsp;🎉 I am honored to be selected for CAST Youth Science and Technology Talent Cultivation Project Doctoral Student Special Program!
@@ -39,7 +40,22 @@ My research focuses on ***human-centered reconstruction and simulation***, explo
 
 - **Selected Publications** (\* Co-first author, ✉️ Corresponding author)
 
-<!-- DyCrowd -->
+<!-- Crowd4D -->
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICML</div><img src='../images/publications/Crowd4D.png' alt="sym" width="100%"></div></div>
+<div class='paper-box-text' markdown="1">
+
+[**Crowd4D: Scene-Aware Monocular 4D Crowd Reconstruction**](https://arxiv.org/)
+
+**Hongbo Kang**, Tianyi Zhou, Qingyang Yang, Hongwei Wen, Jing Huang, Yu-Kun Lai, Kun Li✉️
+
+{% include expandable_abstract.html abstract="Recovering scene-consistent 4D crowd motion from monocular video in large-scale scenes remains challenging due to severe depth ambiguity and complex scene geometry. Existing monocular crowd reconstruction methods typically rely on single-plane assumptions, leading to unreliable metric scale and spatial drift under complex terrain. We propose Crowd4D, the first scene-aware 4D crowd reconstruction framework that jointly optimizes the crowd and scene from a monocular RGB video in large-scale scenes. Crowd4D explicitly incorporates scene geometry and ensures consistency across image and scene spaces via a multi-stage optimization strategy. A key bottleneck of this task lies in accurate human–scene alignment, particularly in scale and position. However, human and scene reconstructions are typically decoupled. To address this, we introduce the Human–Scene Interaction Proxy (HSIP) as an intermediate representation, derived from Scene Interaction Point Clouds and a Scene Interaction Surface (SIPC\&SIS), which encode explicit scene-aware geometric priors and redefine the optimization space for large-scale monocular 4D crowd reconstruction. To further improve temporal stability under occlusions, we introduce Crowd Structural Coherence Regularization (CSCR), which leverages HSIP-based spatial priors to impose soft temporal consistency on pairwise relative displacements and directions within local crowd neighborhoods. Extensive experiments demonstrate that Crowd4D consistently outperforms existing state-of-the-art methods and enables robust monocular 4D crowd reconstruction in complex, large-scale real-world scenes." %}
+
+***International Conference on Machine Learning***, 2026 [**\[Project Page \]**](https://cic.tju.edu.cn/faculty/likun/projects/Crowd4D/index.html)[**\[Code\]**](https://github.com/KHB1698/Crowd4D) <strong><span class='show_paper_citations' data='DhtAFkwAAAAJ:ALROH1vI_8AC'></span></strong>
+</div>
+</div>
+
+
+<!-- DRPose -->
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">TCSVT</div><img src='../images/publications/drpose1.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
@@ -202,8 +218,7 @@ Xinlin Yuan, Yong Wang, Yan Li, **Hongbo Kang**, Yu Chen, Boran Yang
 
 
 # 🎓 Academic Service
-- **Journal Reviewer**: IJCV, TMM, TCSVT, PR, etc.
-- **Conference Reviewer**: CVPR, ACM MM, etc.
+- **Reviewer**: IJCV, TMM, TCSVT, PR, MM, etc.
 
 
 <!-- # 📖 Educations
@@ -224,5 +239,3 @@ Xinlin Yuan, Yong Wang, Yan Li, **Hongbo Kang**, Yu Chen, Boran Yang
 <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=m&d=2olqXOZJM4rIl9TMPkMp7LhhCme2cAS84jr3abw_DjY'></script>
 </div>
 </div>
-
-
