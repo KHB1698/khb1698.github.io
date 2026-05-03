@@ -189,3 +189,26 @@ h1:before, .anchor:before {
     border-left: 2px solid #eee;
   }
 }
+
+/* CCF rank labels */
+.ccf {
+  display: inline-block;
+  font-size: 0.75em;
+  font-weight: bold;
+  padding: 0.15em 0.5em;
+  border-radius: 3px;
+  margin-left: 0.3em;
+  vertical-align: middle;
+}
+.ccf-a {
+  color: #fff;
+  background-color: #f0a3a0;
+}
+.ccf-b {
+  color: #fff;
+  background-color: #9ac0e5;
+}
+.ccf-c {
+  color: #fff;
+  background-color: #a8dba8;
+}
