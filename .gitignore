@@ -4,3 +4,4 @@ push.sh
 vendor/
 .bundle/
 .history
+.claude
