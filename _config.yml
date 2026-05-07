@@ -7,12 +7,12 @@
 
 # Site Settings
 title                    : "Hongbo Kang (康洪菠)"
-description              : "Human-related motion reconstruction and generation"
+description              : ""
 repository               : "KHB1698/khb1698.github.io"
 google_scholar_stats_use_cdn : true
 
 # google analytics
-google_analytics_id      :  # get google_analytics_id from https://analytics.google.com/analytics/
+google_analytics_id      : "G-8MRNG8840C"  # get google_analytics_id from https://analytics.google.com/analytics/
 
 # SEO Related
 google_site_verification :  # get google_site_verification from https://search.google.com/search-console/about
@@ -29,7 +29,7 @@ author:
   pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?hl=en&user=QvDh5Q0AAAAJ"
   email            : "hbkang@tju.edu.cn"
-  researchgate     : "https://www.researchgate.net/profile/Hongbo-Kang-3"
+  researchgate     : #"https://www.researchgate.net/profile/Hongbo-Kang-3"
   uri              :
   bitbucket        :
   codepen          :
