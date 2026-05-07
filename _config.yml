@@ -7,7 +7,7 @@
 
 # Site Settings
 title                    : "Hongbo Kang (康洪菠)"
-description              : ""
+description              : "Ph.D. candidate at Tianjin University. Researching human-related reconstruction and generation."
 repository               : "KHB1698/khb1698.github.io"
 google_scholar_stats_use_cdn : true
 
@@ -23,7 +23,7 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 author:
   name             : "Hongbo Kang"
   avatar           : "images/khb5.jpg" # e.g., "images/avatar.jpg"
-  bio              : "Ph.D. Candidate"
+  bio              : # "Ph.D. Candidate"
   location         : "Tianjin, China"
   employer         :
   pubmed           : 

@@ -1,7 +1,7 @@
 ---
 permalink: /
 title: "Hongbo Kang (康洪菠) - Homepage "
-excerpt: ""
+excerpt: "Ph.D. candidate at Tianjin University. Researching human-related reconstruction and generation."
 author_profile: true
 redirect_from: 
   - /about/
@@ -20,11 +20,11 @@ redirect_from:
 
 My name is **Hongbo Kang (康洪菠)**. I am a Ph.D. candidate at [Tianjin University](https://en.tju.edu.cn/), advised by Prof. [Kun Li](https://cic.tju.edu.cn/faculty/likun/index.html). I also collaborate closely with Prof. [Yu-Kun Lai](https://yukunlai.github.io/) at Cardiff University. I received my M.S. from Chongqing University of Technology, co-supervised by Prof. Yong Wang and Prof. [Wenming Yang](https://www.sigs.tsinghua.edu.cn/ywm_en/main.htm) (Tsinghua University), and my B.Eng. from Jishou University.
 
-My research focuses on ***human-centered reconstruction and simulation***, exploring data-driven methods for perception and decision-making of individuals and crowds. Specifically, it includes: individual and crowd reconstruction, crowd simulation and the construction of virtual crowd datasets, as well as closed-loop simulation of crowds in autonomous driving scenarios.
+My research focuses on ***human-centered reconstruction and generation***, exploring data-driven methods for perception and decision-making of individuals and crowds. Specifically, it includes: individual and crowd reconstruction, crowd simulation and the construction of virtual crowd datasets, as well as closed-loop simulation of crowds in autonomous driving scenarios.
 
 
 
-# 🔥 News
+## 🔥 News
 - *2026.05*: &nbsp;🎉 My paper "Crowd4D: Scene-Aware Monocular 4D Crowd Reconstruction" has been accepted to ***ICML***!
 - *2026.02*: &nbsp;🎉 Our paper "MuRE: Multi-Relationship Encoder for 3D Human Pose Estimation" has been accepted to ***CVIU***!
 - *2026.01*: &nbsp;🎉 Our paper "DRPose: A Diffusion-based Pose Refinement Framework for 3D Human Pose Estimation" has been accepted to ***TCSVT***!
@@ -36,7 +36,7 @@ My research focuses on ***human-centered reconstruction and simulation***, explo
 - *2024.09*: &nbsp;📌 I started my Ph.D. in Prof. [Kun Li](https://cic.tju.edu.cn/faculty/likun/index.html)'s team at Tianjin University.
 - ...
 
-# 📝 Publications 
+## 📝 Publications 
 
 - **Selected Publications** (\* Co-first author, ✉️ Corresponding author)
 
@@ -210,14 +210,14 @@ Xinlin Yuan, Yong Wang, Yan Li, **Hongbo Kang**, Yu Chen, Boran Yang
 
 
 
-# 🎖 Awards
+## 🎖 Awards
 - *2025.12* CAST Youth Science and Technology Talent Cultivation Project Doctoral Student Special Program
 - *2024.06* Outstanding Graduate Student of Chongqing (Top 1%)
 - *2023.10* National Scholarship (Top 1%)
 - *2021.10* PaddlePaddle Developers Experts (PPDE) [**\[AI Studio\]**](https://aistudio.baidu.com/personalcenter/thirdview/791590)
 
 
-# 🎓 Academic Service
+## 🎓 Academic Service
 - **Reviewer**: IJCV, TMM, TCSVT, PR, MM, etc.
 
 
