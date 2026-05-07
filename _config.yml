@@ -6,8 +6,8 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 # Site Settings
-title                    : "Hongbo Kang"
-description              : "" #"Human-related motion reconstruction and generation"
+title                    : "Hongbo Kang (康洪菠)"
+description              : "Human-related motion reconstruction and generation"
 repository               : "KHB1698/khb1698.github.io"
 google_scholar_stats_use_cdn : true
 
@@ -29,7 +29,7 @@ author:
   pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?hl=en&user=QvDh5Q0AAAAJ"
   email            : "hbkang@tju.edu.cn"
-  researchgate     :  # e.g., "https://www.researchgate.net/profile/yourprofile"
+  researchgate     : "https://www.researchgate.net/profile/Hongbo-Kang-3"
   uri              :
   bitbucket        :
   codepen          :
