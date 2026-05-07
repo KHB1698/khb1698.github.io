@@ -44,7 +44,7 @@ My research focuses on ***human-centered reconstruction and simulation***, explo
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">ICML</div><img src='../images/publications/Crowd4D.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
-[**Crowd4D: Scene-Aware Monocular 4D Crowd Reconstruction**](https://arxiv.org/)
+[**Crowd4D: Scene-Aware Monocular 4D Crowd Reconstruction**](https://icml.cc/virtual/2026/poster/65335)
 
 **Hongbo Kang**, Tianyi Zhou, Qingyang Yang, Hongwei Wen, Jing Huang, Yu-Kun Lai, Kun Li✉️
 
