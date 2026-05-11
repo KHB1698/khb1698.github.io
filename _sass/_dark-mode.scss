@@ -15,15 +15,15 @@
 }
 
 [data-theme="dark"] {
-  --bg-color: #0f172a;
+  --bg-color: #1e293b;
   --text-color: #c9d1d9;
-  --card-bg: #0f172a;
+  --card-bg: #1e293b;
   --border-color: #334155;
   --code-bg: #334155;
   --link-color: #08c;
   --link-hover-color: #0099cc;
-  --masthead-bg: #0f172a;
-  --sidebar-bg: #0f172a;
+  --masthead-bg: #1e293b;
+  --sidebar-bg: #1e293b;
   --secondary-bg: #334155;
   --hover-bg: #334155;
 }
@@ -148,10 +148,10 @@
     background: var(--masthead-bg);
     
     a {
-      color: var(--text-color);
+      color: var(--text-color) !important;
       
       &:hover {
-        color: var(--link-color);
+        color: var(--link-color) !important;
       }
     }
 
@@ -171,10 +171,11 @@
     border: 1px solid var(--border-color);
 
     a {
-      color: var(--text-color);
+      color: var(--text-color) !important;
 
       &:hover {
         background: var(--hover-bg);
+        color: var(--link-color) !important;
       }
     }
   }
@@ -290,6 +291,16 @@
     &:focus {
       border-color: var(--link-color);
     }
+  }
+
+  .ccf-a {
+    background-color: #c74e4a;
+  }
+  .ccf-b {
+    background-color: #3b82b6;
+  }
+  .ccf-c {
+    background-color: #4a8f4a;
   }
 }
 
