@@ -5,33 +5,11 @@
   // Function to get system theme preference
   function getSystemTheme() {
     const isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    console.log('[Dark Mode Debug] System preference:', isDark ? 'dark' : 'light');
     return isDark ? 'dark' : 'light';
   }
 
-  // Check for saved theme preference, fallback to system preference
-  function getInitialTheme() {
-    const savedTheme = localStorage.getItem('theme');
-    const systemTheme = getSystemTheme();
-    
-    console.log('[Dark Mode Debug] Saved theme in localStorage:', savedTheme);
-    console.log('[Dark Mode Debug] System theme:', systemTheme);
-    
-    // 每次打开都优先使用系统主题
-    // 如果 localStorage 中保存的主题与系统不一致，清除旧的保存
-    if (savedTheme && savedTheme !== systemTheme) {
-      console.log('[Dark Mode Debug] Saved theme differs from system, clearing saved theme');
-      localStorage.removeItem('theme');
-    }
-    
-    console.log('[Dark Mode Debug] Using system theme:', systemTheme);
-    return systemTheme;
-  }
-
   // Apply theme on page load
-  const currentTheme = getInitialTheme();
-  console.log('[Dark Mode Debug] Applying theme:', currentTheme);
-  document.documentElement.setAttribute('data-theme', currentTheme);
+  document.documentElement.setAttribute('data-theme', getSystemTheme());
 
   // Wait for DOM to be ready
   function initThemeToggle() {
@@ -53,9 +31,6 @@
       // Update DOM
       document.documentElement.setAttribute('data-theme', newTheme);
       
-      // Save preference
-      localStorage.setItem('theme', newTheme);
-      
       // Add rotation animation
       toggleButton.style.transform = 'rotate(360deg)';
       setTimeout(() => {
@@ -70,20 +45,15 @@
       // For modern browsers
       if (mediaQuery.addEventListener) {
         mediaQuery.addEventListener('change', function(e) {
-          // Only apply system theme if user hasn't set a preference
-          if (!localStorage.getItem('theme')) {
-            const newTheme = e.matches ? 'dark' : 'light';
-            document.documentElement.setAttribute('data-theme', newTheme);
-          }
+          const newTheme = e.matches ? 'dark' : 'light';
+          document.documentElement.setAttribute('data-theme', newTheme);
         });
       }
       // For older browsers
       else if (mediaQuery.addListener) {
         mediaQuery.addListener(function(e) {
-          if (!localStorage.getItem('theme')) {
-            const newTheme = e.matches ? 'dark' : 'light';
-            document.documentElement.setAttribute('data-theme', newTheme);
-          }
+          const newTheme = e.matches ? 'dark' : 'light';
+          document.documentElement.setAttribute('data-theme', newTheme);
         });
       }
     }

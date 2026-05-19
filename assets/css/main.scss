@@ -46,11 +46,12 @@
 .paper-box {
     display: flex;
     justify-content: left;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: row;
     flex-wrap: wrap;
     border-bottom: 1px #efefef solid;
-    padding: 0.5em 0 0.5em 0;
+    gap: 1em;
+    padding: 1em 0;
     
 
     .paper-box-image{
@@ -59,9 +60,11 @@
         width: 100%;
         order: 2;
         img {
-            max-width: 400px;
+            width: auto;
+            max-width: min(100%, 400px);
+            height: auto;
             box-shadow: 3px 3px 6px #888;
-            object-fit: cover;
+            border-radius: 4px;
         }
     }
     
@@ -72,6 +75,7 @@
     
     @include breakpoint($medium) {
         flex-wrap: nowrap; // 防止换行，确保左右布局
+        gap: 0;
         
         .paper-box-image{
             justify-content: left;
@@ -128,25 +132,49 @@ h1:before, .anchor:before {
     margin: 0.5em 0;
   }
   
-  .abstract-summary, .abstract-full {
+  summary, .abstract-full {
     font-weight: normal;
     padding: 0.8em 1em;
     border-radius: 12px;
     background-color: #f9f9f9;
     border: 1px solid #e0e0e0;
   }
-  
-  .expand-btn, .collapse-btn {
+
+  summary {
     cursor: pointer;
-    margin-right: 0.5em;
-    font-size: 0.8em;
-    color: #08c;
-    transition: transform 0.2s;
-    user-select: none;
-    display: inline-block;
-    
-    &:hover {
+    list-style: none;
+    outline: none;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &::before {
+      content: "▶";
+      display: inline-block;
+      margin-right: 0.5em;
+      font-size: 0.8em;
+      color: #08c;
+      transition: transform 0.2s;
+    }
+
+    &:hover::before {
       color: #004499;
+    }
+
+    &:focus-visible {
+      box-shadow: 0 0 0 3px rgba(0, 136, 204, 0.25);
+    }
+  }
+  
+  details[open] {
+    summary::before {
+      transform: rotate(90deg);
+    }
+
+    .abstract-preview,
+    .ellipsis {
+      display: none;
     }
   }
   
@@ -157,30 +185,6 @@ h1:before, .anchor:before {
   // 保持原有的 details 样式以兼容其他地方
   details {
     margin: 0.5em 0;
-  }
-
-  summary {
-    cursor: pointer;
-    font-weight: normal;
-    outline: none;
-    
-    &::-webkit-details-marker {
-      display: none;
-    }
-
-    &::before {
-      content: "▶";
-      display: inline-block;
-      margin-right: 0.5em;
-      font-size: 0.8em;
-      transition: transform 0.2s;
-    }
-  }
-
-  details[open] {
-    summary::before {
-      transform: rotate(90deg);
-    }
   }
 
   details > div {

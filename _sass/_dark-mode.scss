@@ -225,7 +225,7 @@
     }
   }
 
-  .abstract-summary,
+  .paper-abstract summary,
   .abstract-full {
     background-color: #334155 !important;
     border: 1px solid var(--border-color) !important;
@@ -239,13 +239,12 @@
     color: #fff;
   }
 
-  .expand-btn,
-  .collapse-btn {
+  .paper-abstract summary::before {
     color: var(--link-color);
+  }
 
-    &:hover {
-      color: var(--link-hover-color);
-    }
+  .paper-abstract summary:hover::before {
+    color: var(--link-hover-color);
   }
 
   h1, h2, h3, h4, h5, h6 {

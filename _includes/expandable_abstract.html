@@ -1,33 +1,8 @@
 {% assign visible_text = include.abstract | truncate: 150, '' %}
-{% assign hidden_text = include.abstract | remove_first: visible_text %}
 
 <div class="paper-abstract">
-  <div class="expandable-abstract">
-    <div class="abstract-summary">
-      <span class="expand-btn" onclick="toggleAbstract(this)">▶</span>
-      <strong>Abstract:</strong> {{ visible_text }}<span class="ellipsis">...</span>
-    </div>
-    <div class="abstract-full" style="display: none;">
-      <span class="collapse-btn" onclick="toggleAbstract(this)">▼</span>
-      <strong>Abstract:</strong> {{ include.abstract }}
-    </div>
-  </div>
+  <details class="expandable-abstract">
+    <summary><strong>Abstract:</strong><span class="abstract-preview"> {{ visible_text }}</span><span class="ellipsis">...</span></summary>
+    <div class="abstract-full">{{ include.abstract }}</div>
+  </details>
 </div>
-
-<script>
-if (typeof toggleAbstract === 'undefined') {
-  function toggleAbstract(btn) {
-    const container = btn.closest('.expandable-abstract');
-    const summary = container.querySelector('.abstract-summary');
-    const full = container.querySelector('.abstract-full');
-    
-    if (full.style.display === 'none') {
-      summary.style.display = 'none';
-      full.style.display = 'block';
-    } else {
-      summary.style.display = 'block';
-      full.style.display = 'none';
-    }
-  }
-}
-</script>

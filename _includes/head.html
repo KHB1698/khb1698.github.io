@@ -21,10 +21,7 @@
       return 'light';
     }
     
-    // Check for saved theme, fallback to system preference
-    const savedTheme = localStorage.getItem('theme');
-    const theme = savedTheme ? savedTheme : getSystemTheme();
-    document.documentElement.setAttribute('data-theme', theme);
+    document.documentElement.setAttribute('data-theme', getSystemTheme());
   })();
 </script>
 
@@ -32,6 +29,4 @@
 <link rel="stylesheet" href="assets/css/main.css">
 
 <meta http-equiv="cleartype" content="on">
-<head>
-  <base target="_blank">
-</head>
+<base target="_blank">
