@@ -25,8 +25,10 @@ My research focuses on ***human-centered reconstruction and generation***, explo
 
 
 ## 🔥 News
+- *2026.06*: &nbsp;📍 I will attend ***ICML 2026*** in July. Feel free to reach out for discussions!
 - *2026.05*: &nbsp;🏆 I am honored to be awarded the China Scholarship Council (CSC) scholarship!
 - *2026.05*: &nbsp;🎉 My paper "Crowd4D: Scene-Aware Monocular 4D Crowd Reconstruction" has been accepted to ***ICML***!
+- *2026.04*: &nbsp;📌 Our DyCrowd poster will be presented at ***China3DV***!
 - *2026.02*: &nbsp;🎉 Our paper "MuRE: Multi-Relationship Encoder for 3D Human Pose Estimation" has been accepted to ***CVIU***!
 - *2026.01*: &nbsp;🎉 Our paper "DRPose: A Diffusion-based Pose Refinement Framework for 3D Human Pose Estimation" has been accepted to ***TCSVT***!
 - *2025.12*: &nbsp;🏆 I am honored to be selected for CAST Youth Science and Technology Talent Cultivation Project Doctoral Student Special Program!
