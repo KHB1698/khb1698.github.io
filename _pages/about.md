@@ -17,7 +17,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-
+<!-- ## 👋 About Me -->
 My name is **Hongbo Kang (康洪菠)**. I am a Ph.D. candidate at [Tianjin University](https://en.tju.edu.cn/), advised by Prof. [Kun Li](https://cic.tju.edu.cn/faculty/likun/index.html). I also collaborate closely with Prof. [Yu-Kun Lai](https://yukunlai.github.io/) at Cardiff University. I received my M.S. from Chongqing University of Technology, co-supervised by Prof. Yong Wang and Prof. [Wenming Yang](https://www.sigs.tsinghua.edu.cn/ywm/list.htm) (Tsinghua University), and my B.Eng. from Jishou University. 
 
 My research focuses on ***human-centered reconstruction and generation***, exploring data-driven methods for perception and decision-making of individuals and crowds. Specifically, it includes: individual and crowd reconstruction, crowd simulation and the construction of virtual crowd datasets, as well as closed-loop simulation of pedestrians in autonomous driving scenarios.

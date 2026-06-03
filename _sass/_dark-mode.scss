@@ -9,7 +9,7 @@
   --card-bg: #fff;
   --border-color: #f2f3f3;
   --code-bg: #fafafa;
-  --link-color: #08c;
+  --link-color: #0b83c5;
   --masthead-bg: #fff;
   --sidebar-bg: #fff;
 }
@@ -20,8 +20,8 @@
   --card-bg: #1e293b;
   --border-color: #334155;
   --code-bg: #334155;
-  --link-color: #08c;
-  --link-hover-color: #0099cc;
+  --link-color: #38bdf8;
+  --link-hover-color: #7dd3fc;
   --masthead-bg: #1e293b;
   --sidebar-bg: #1e293b;
   --secondary-bg: #334155;
@@ -84,14 +84,14 @@
 
     // 所有论文链接使用亮蓝色
     a {
-      color: #08c !important;
+      color: #38bdf8 !important;
       
       &:hover {
-        color: #0099cc !important;
+        color: #7dd3fc !important;
       }
 
       strong {
-        color: #08c !important;
+        color: #38bdf8 !important;
       }
     }
   }
@@ -101,14 +101,14 @@
     background-color: transparent;
 
     a {
-      color: #08c !important;
+      color: #38bdf8 !important;
       
       &:hover {
-        color: #0099cc !important;
+        color: #7dd3fc !important;
       }
 
       strong {
-        color: #08c !important;
+        color: #38bdf8 !important;
       }
     }
   }

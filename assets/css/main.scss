@@ -136,7 +136,7 @@ h1:before, .anchor:before {
     margin-top: .5em;
     margin-left: -.5em;
     color: white;
-    background-color: #08c;
+    background-color: #0b83c5;
     font-size: .8em;
 }
 
@@ -174,16 +174,16 @@ h1:before, .anchor:before {
       display: inline-block;
       margin-right: 0.5em;
       font-size: 0.8em;
-      color: #08c;
+      color: #0b83c5;
       transition: transform 0.2s;
     }
 
     &:hover::before {
-      color: #004499;
+      color: #075f8f;
     }
 
     &:focus-visible {
-      box-shadow: 0 0 0 3px rgba(0, 136, 204, 0.25);
+      box-shadow: 0 0 0 3px rgba(11, 131, 197, 0.25);
     }
   }
   
