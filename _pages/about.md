@@ -219,7 +219,7 @@ Xinlin Yuan, Yong Wang, Yan Li, **Hongbo Kang**, Yu Chen, Boran Yang
 
 
 ## 🎓 Academic Service
-- **Reviewer**: IJCV, TMM, TCSVT, PR, MM, etc.
+- **Reviewer**: IJCV, TMM, TCSVT, PR, MM, SIGGRAPH Asia, etc.
 
 
 <!-- # 📖 Educations
