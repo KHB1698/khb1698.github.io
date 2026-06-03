@@ -212,6 +212,7 @@ Xinlin Yuan, Yong Wang, Yan Li, **Hongbo Kang**, Yu Chen, Boran Yang
 
 
 ## 🎖 Awards
+- *2026.05* China Scholarship Council (CSC) Scholarship
 - *2025.12* CAST Youth Science and Technology Talent Cultivation Project Doctoral Student Special Program
 - *2024.06* Outstanding Graduate Student of Chongqing (Top 1%)
 - *2023.10* National Scholarship (Top 1%)
