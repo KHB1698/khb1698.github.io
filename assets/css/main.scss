@@ -43,6 +43,17 @@
 // Dark mode styles
 @import "dark-mode";
 
+.news-scroll {
+    max-height: 15.5em;
+    overflow-y: auto;
+    padding-right: 0.5em;
+}
+
+.news-scroll ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 .paper-box {
     display: flex;
     justify-content: left;

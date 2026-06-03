@@ -25,6 +25,8 @@ My research focuses on ***human-centered reconstruction and generation***, explo
 
 
 ## 🔥 News
+<div class="news-scroll" markdown="1">
+
 - *2026.06*: &nbsp;📍 I will attend ***ICML 2026*** in July. Feel free to reach out for discussions!
 - *2026.05*: &nbsp;🏆 I am honored to be awarded the China Scholarship Council (CSC) scholarship!
 - *2026.05*: &nbsp;🎉 My paper "Crowd4D: Scene-Aware Monocular 4D Crowd Reconstruction" has been accepted to ***ICML***!
@@ -38,6 +40,8 @@ My research focuses on ***human-centered reconstruction and generation***, explo
 - *2025.05*: &nbsp;🎉 My paper "Double-chain Graph Convolution Transformer for 3D Human Pose Estimation" has been accepted to ***TMM***!
 - *2024.09*: &nbsp;📌 I started my Ph.D. in Prof. [Kun Li](https://cic.tju.edu.cn/faculty/likun/index.html)'s team at Tianjin University.
 - ...
+
+</div>
 
 ## 📝 Publications 
 
@@ -222,7 +226,8 @@ Xinlin Yuan, Yong Wang, Yan Li, **Hongbo Kang**, Yu Chen, Boran Yang
 
 
 ## 🎓 Academic Service
-- **Reviewer**: IJCV, TMM, TCSVT, PR, MM, SIGGRAPH Asia, etc.
+- **Journal Reviewer**: IJCV, TMM, TCSVT, PR, etc.
+- **Conference Reviewer**: CVPR, MM, SIGGRAPH Asia, etc.
 
 
 <!-- # 📖 Educations
