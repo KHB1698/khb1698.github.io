@@ -1,7 +1,7 @@
 ---
 permalink: /
 title: "Hongbo Kang (康洪菠) - Homepage "
-excerpt: "Ph.D. candidate at Tianjin University. Researching human-related reconstruction and generation."
+excerpt: "Ph.D. candidate at Tianjin University. Researching human-centered 3D reconstruction and generation."
 author_profile: true
 redirect_from: 
   - /about/
@@ -18,9 +18,9 @@ redirect_from:
 <span class='anchor' id='about-me'></span>
 
 <!-- ## 👋 About Me -->
-My name is **Hongbo Kang (康洪菠)**. I am a Ph.D. candidate at [Tianjin University](https://en.tju.edu.cn/), advised by Prof. [Kun Li](https://cic.tju.edu.cn/faculty/likun/index.html). I also collaborate closely with Prof. [Yu-Kun Lai](https://yukunlai.github.io/) at Cardiff University. I received my M.S. from Chongqing University of Technology, co-supervised by Prof. Yong Wang and Prof. [Wenming Yang](https://www.sigs.tsinghua.edu.cn/ywm/list.htm) (Tsinghua University), and my B.Eng. from Jishou University. 
+My name is <strong class="about-emphasis">Hongbo Kang (康洪菠)</strong>. I am a Ph.D. candidate at Tianjin University, advised by Prof. [Kun Li](https://cic.tju.edu.cn/faculty/likun/index.html). I also collaborate closely with Prof. [Yu-Kun Lai](https://yukunlai.github.io/) at Cardiff University. I received my M.S. from Chongqing University of Technology, co-supervised by Prof. Yong Wang and Prof. [Wenming Yang](https://www.sigs.tsinghua.edu.cn/ywm/list.htm) (Tsinghua University), and my B.Eng. from Jishou University. 
 
-My research focuses on ***human-centered reconstruction and generation***, exploring data-driven methods for perception and decision-making of individuals and crowds. Specifically, it includes: individual and crowd reconstruction, crowd simulation and the construction of virtual crowd datasets, as well as closed-loop simulation of pedestrians in autonomous driving scenarios.
+Humans are central to the real world, yet occlusions, viewpoint ambiguity, and complex human-scene and human-human interactions make their behavior difficult to perceive, model, and predict. To address the limitations of 2D representations, my research focuses on <strong class="about-emphasis"><em>human-centered 3D reconstruction and generation</em></strong>, including <strong class="about-emphasis"><em>individual and crowd reconstruction</em></strong>, <strong class="about-emphasis"><em>virtual mixed-age crowd data construction</em></strong>, and <strong class="about-emphasis"><em>individual and crowd motion simulation</em></strong>. My long-term goal is to build a virtual-real fusion framework with a closed loop of data, modeling, and simulation, providing foundational support for <strong class="about-emphasis"><em>virtual reality, autonomous driving, and embodied intelligence</em></strong>.
 
 
 

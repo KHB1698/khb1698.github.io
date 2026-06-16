@@ -147,23 +147,25 @@ h1:before, .anchor:before {
   vertical-align: baseline;
 }
 
+.about-emphasis {
+  font-size: 1.06em;
+}
+
 .paper-abstract {
   .expandable-abstract {
     margin: 0.5em 0;
-  }
-  
-  summary, .abstract-full {
-    font-weight: normal;
-    padding: 0.8em 1em;
     border-radius: 12px;
     background-color: #f9f9f9;
     border: 1px solid #e0e0e0;
+    overflow: hidden;
   }
 
   summary {
     cursor: pointer;
     list-style: none;
     outline: none;
+    font-weight: normal;
+    padding: 0.8em 1em;
 
     &::-webkit-details-marker {
       display: none;
@@ -188,6 +190,10 @@ h1:before, .anchor:before {
   }
   
   details[open] {
+    summary {
+      padding-bottom: 0.25em;
+    }
+
     summary::before {
       transform: rotate(90deg);
     }
@@ -196,10 +202,15 @@ h1:before, .anchor:before {
     .ellipsis {
       display: none;
     }
+
+    .abstract-full {
+      padding-top: 0.25em;
+    }
   }
   
   .abstract-full {
-    margin-top: 0.5em;
+    font-weight: normal;
+    padding: 0.8em 1em;
   }
   
   // 保持原有的 details 样式以兼容其他地方
@@ -208,9 +219,7 @@ h1:before, .anchor:before {
   }
 
   details > div {
-    margin-top: 0.5em;
-    padding-left: 1.5em;
-    border-left: 2px solid #eee;
+    margin-top: 0;
   }
 }
 

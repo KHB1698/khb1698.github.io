@@ -225,13 +225,24 @@
     }
   }
 
-  .paper-abstract summary,
-  .abstract-full {
+  .paper-abstract .expandable-abstract {
     background-color: #334155 !important;
     border: 1px solid var(--border-color) !important;
     color: var(--text-color) !important;
+  }
+
+  .paper-abstract summary,
+  .abstract-full {
+    color: var(--text-color) !important;
     padding: 0.8em 1em;
-    border-radius: 12px;
+  }
+
+  .paper-abstract details[open] summary {
+    padding-bottom: 0.25em;
+  }
+
+  .paper-abstract details[open] .abstract-full {
+    padding-top: 0.25em;
   }
 
   .badge {
