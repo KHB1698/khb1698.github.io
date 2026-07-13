@@ -27,7 +27,7 @@ Humans are central to the real world, yet occlusions, viewpoint ambiguity, and c
 ## 🔥 News
 <div class="news-scroll" markdown="1">
 
-- *2026.06*: &nbsp;📍 I will attend ***ICML 2026*** in July. Feel free to reach out for discussions!
+- *2026.07*: &nbsp;📍 I attended ***ICML 2026*** and presented our work "Crowd4D".
 - *2026.05*: &nbsp;🏆 I am honored to be awarded the China Scholarship Council (CSC) scholarship!
 - *2026.05*: &nbsp;🎉 My paper "Crowd4D: Scene-Aware Monocular 4D Crowd Reconstruction" has been accepted to ***ICML***!
 - *2026.04*: &nbsp;📌 Our DyCrowd poster will be presented at ***China3DV***!
