@@ -187,10 +187,12 @@ test("contains all publication disclosures and source links", async () => {
     html.indexOf('<div class="publications-heading">'),
     html.indexOf("</div>", html.indexOf('<div class="publications-heading">')),
   );
-  assert.match(
+  assert.doesNotMatch(
     publicationHeading,
     /\* Equal Contribution, ✉️ Corresponding author/,
   );
+  assert.doesNotMatch(html, /<p class="publication-note">/);
+  assert.equal((html.match(/\(\* Equal Contribution\)/g) ?? []).length, 7);
   assert.ok((html.match(/class="publication-inline-links"/g) ?? []).length >= 11);
 
   const allPublications = html.slice(
