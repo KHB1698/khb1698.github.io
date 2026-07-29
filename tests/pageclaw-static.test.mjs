@@ -27,6 +27,7 @@ test("preserves the PageClaw section order and complete research record", async 
     "Hongbo Kang (康洪菠)",
     "Ph.D. Candidate · @TJU",
     "Crowd4D: Scene-Aware Monocular 4D Crowd Reconstruction",
+    "AnnyCrowd: Mixed-Age Crowd Reconstruction from a Single Image",
     "DRPose: A Diffusion-based Pose Refinement Framework for 3D Human Pose Estimation",
     "DyCrowd: Towards Dynamic Crowd Reconstruction from a Large-scene Video",
     "RESCUE: Crowd Evacuation Simulation via Controlling SDM-United Characters",
@@ -192,7 +193,7 @@ test("contains all publication disclosures and source links", async () => {
     /\* Equal Contribution, ✉️ Corresponding author/,
   );
   assert.doesNotMatch(html, /<p class="publication-note">/);
-  assert.equal((html.match(/\(\* Equal Contribution\)/g) ?? []).length, 7);
+  assert.equal((html.match(/\(\* Equal Contribution\)/g) ?? []).length, 8);
   assert.ok((html.match(/class="publication-inline-links"/g) ?? []).length >= 11);
 
   const allPublications = html.slice(
@@ -204,12 +205,12 @@ test("contains all publication disclosures and source links", async () => {
   );
   assert.equal(
     (allPublications.match(/<article class="publication">/g) ?? []).length,
-    11,
+    12,
   );
   const compactVenues = [
     ...allPublications.matchAll(/<p class="venue">[\s\S]*?<\/p>/g),
   ];
-  assert.equal(compactVenues.length, 11);
+  assert.equal(compactVenues.length, 12);
   for (const venue of compactVenues) {
     assert.doesNotMatch(venue[0], /·\s*(?:CCF-[ABC]|Highlight)/);
   }
@@ -224,6 +225,7 @@ test("contains all publication disclosures and source links", async () => {
   }
   assert.doesNotMatch(allPublications, /publication-timeline|Publication timeline/);
   const chronologicalTitles = [
+    "AnnyCrowd: Mixed-Age Crowd Reconstruction from a Single Image",
     "Crowd4D: Scene-Aware Monocular 4D Crowd Reconstruction",
     "MuRE: Multi-Relationship Encoder for 3D Human Pose Estimation",
     "DRPose: A Diffusion-based Pose Refinement Framework for 3D Human Pose Estimation",
@@ -266,6 +268,20 @@ test("contains all publication disclosures and source links", async () => {
   assert.ok(cviuTags);
   assert.doesNotMatch(cviuTags, /CAS Q3|IF 3\.6/);
   assert.doesNotMatch(html, /Highest JIF from|IF 23\.6|IF 11\.1|IF 9\.7/);
+  assert.match(html, /<span class="tag">CICAI 2026<\/span>\s*<span class="tag">CAAI-A<\/span>/);
+  assert.doesNotMatch(html, /Download PDF/);
+  const annyCrowdPublication = allPublications.match(
+    /<article class="publication">[\s\S]*?AnnyCrowd: Mixed-Age Crowd Reconstruction from a Single Image[\s\S]*?<\/article>/,
+  )?.[0];
+  assert.ok(annyCrowdPublication);
+  assert.match(
+    annyCrowdPublication,
+    /<strong>Hongbo Kang\*<\/strong>, Guoqi Wang\*[\s\S]*?\(\* Equal Contribution\)/,
+  );
+  assert.match(
+    annyCrowdPublication,
+    /<a href="#">Paper<\/a>[\s\S]*?<a href="#">Project Page<\/a>[\s\S]*?<a href="#">Code<\/a>/,
+  );
   assert.match(html, /https:\/\/github\.com\/KHB1698\/Crowd4D/);
   assert.equal(
     (html.match(/https:\/\/arxiv\.org\/abs\/2607\.19517/g) ?? []).length,
