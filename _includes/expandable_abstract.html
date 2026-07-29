@@ -1,8 +1,0 @@
-{% assign visible_text = include.abstract | truncate: 150, '' %}
-
-<div class="paper-abstract">
-  <details class="expandable-abstract">
-    <summary><strong>Abstract:</strong><span class="abstract-preview"> {{ visible_text }}</span><span class="ellipsis">...</span></summary>
-    <div class="abstract-full">{{ include.abstract }}</div>
-  </details>
-</div>
