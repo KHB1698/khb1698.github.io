@@ -40,6 +40,7 @@ test("preserves the PageClaw section order and complete research record", async 
     "Hierarchical flow learning for low-light image enhancement",
     "China Scholarship Council (CSC) Scholarship",
     "Conference Reviewer",
+    "CVPR, AAAI, MM, SIGGRAPH Asia, etc.",
   ]) {
     assert.match(html, new RegExp(escapeRegExp(required)));
   }
