@@ -154,7 +154,7 @@
 
       .profile-name-cn {
         margin: 4px 0 0;
-        color: var(--color-text);
+        color: var(--color-muted);
         font-size: 1.08rem;
         font-weight: 400;
         line-height: 1.25;
@@ -652,10 +652,6 @@
         display: none;
       }
 
-      .nav-short {
-        display: none;
-      }
-
       .top-nav {
         display: flex;
         width: min(930px, 100%);
@@ -1027,14 +1023,6 @@
           --content-pad: 28px;
         }
 
-        .nav-full {
-          display: none;
-        }
-
-        .nav-short {
-          display: inline;
-        }
-
         .site-brand {
           padding-inline: 22px;
         }
@@ -1117,14 +1105,6 @@
         .top-nav a:hover {
           border-radius: 4px;
           background: var(--color-soft);
-        }
-
-        .nav-full {
-          display: inline;
-        }
-
-        .nav-short {
-          display: none;
         }
 
         .js .top-nav {
@@ -1283,8 +1263,8 @@
 
     <header class="site-header">
       <div class="header-inner">
-        <a class="site-brand" href="#about" aria-label="Hongbo Kang's Homepage">
-          <span class="site-brand-full">Hongbo Kang's Homepage</span>
+        <a class="site-brand" href="#about" aria-label="Homepage">
+          <span class="site-brand-full">Homepage</span>
           <span class="site-brand-short" aria-hidden="true">HK</span>
         </a>
         <nav
@@ -1294,19 +1274,10 @@
         >
           <a href="#about-content">About Me</a>
           <a href="#news">News</a>
-          <a href="#selected-work" aria-label="Selected Research">
-            <span class="nav-full">Selected Research</span>
-            <span class="nav-short" aria-hidden="true">Research</span>
-          </a>
-          <a href="#publications" aria-label="Publications">
-            <span class="nav-full">Publications</span>
-            <span class="nav-short" aria-hidden="true">Pubs</span>
-          </a>
+          <a href="#selected-work" aria-label="Selected Research">Selected Research</a>
+          <a href="#publications" aria-label="Publications">Publications</a>
           <a href="#awards">Awards</a>
-          <a href="#service" aria-label="Service">
-            <span class="nav-full">Service</span>
-            <span class="nav-short" aria-hidden="true">Svc</span>
-          </a>
+          <a href="#service" aria-label="Service">Service</a>
         </nav>
         <button
           class="menu-toggle"

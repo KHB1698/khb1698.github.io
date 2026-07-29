@@ -71,6 +71,8 @@ test("ships accessible minimal interactions", async () => {
   assert.match(html, /html\s*\{[\s\S]*?font-size:\s*15px;/);
   assert.match(html, /body\s*\{[\s\S]*?font-size:\s*1rem;/);
   assert.match(html, /<header class="site-header">/);
+  assert.match(html, /<span class="site-brand-full">Homepage<\/span>/);
+  assert.doesNotMatch(html, /<span class="site-brand-full">Hongbo Kang's Homepage<\/span>/);
   assert.match(html, /<a href="#about-content">About Me<\/a>/);
   assert.match(
     html,
@@ -79,7 +81,17 @@ test("ships accessible minimal interactions", async () => {
   assert.match(html, /class="menu-toggle"/);
   assert.match(html, /aria-controls="primary-navigation"/);
   assert.match(html, /aria-expanded="false"/);
-  assert.match(html, /href="#selected-work"\s+aria-label="Selected Research"/);
+  assert.match(
+    html,
+    /<a href="#selected-work"\s+aria-label="Selected Research">Selected Research<\/a>/,
+  );
+  assert.match(
+    html,
+    /<a href="#publications"\s+aria-label="Publications">Publications<\/a>/,
+  );
+  assert.match(html, /<a href="#service"\s+aria-label="Service">Service<\/a>/);
+  assert.doesNotMatch(html, /class="nav-(?:full|short)"/);
+  assert.doesNotMatch(html, />Pubs<\/span>|>Svc<\/span>/);
   assert.match(html, /<aside class="sidebar"/);
   assert.match(
     html,
