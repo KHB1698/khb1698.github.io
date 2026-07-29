@@ -101,7 +101,7 @@ test("ships accessible minimal interactions", async () => {
   );
   assert.match(
     html,
-    /html\[data-theme="dark"\]\s*\{[\s\S]*?--color-page:\s*#151719;[\s\S]*?--color-sidebar:\s*#151719;/i,
+    /html\[data-theme="dark"\]\s*\{[\s\S]*?--color-page:\s*#2d353b;[\s\S]*?--color-sidebar:\s*#2d353b;/i,
   );
   assert.match(html, /--sidebar-width:\s*250px/i);
   assert.match(
@@ -109,6 +109,7 @@ test("ships accessible minimal interactions", async () => {
     /grid-template-columns:\s*var\(--sidebar-width\) minmax\(0,\s*1fr\)/i,
   );
   assert.match(html, /\.sidebar\s*\{[\s\S]*?position:\s*sticky/i);
+  assert.match(html, /\.portrait-wrapper\s*\{[\s\S]*?align-self:\s*start;/);
   assert.match(html, /@media \(max-width:\s*680px\)/i);
   assert.match(
     html,
