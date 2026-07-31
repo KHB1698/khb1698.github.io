@@ -641,6 +641,7 @@
         font-size: 0.9rem;
         font-weight: 750;
         letter-spacing: -0.01em;
+        white-space: nowrap;
       }
 
       .site-brand:hover {
@@ -653,10 +654,16 @@
       }
 
       .top-nav {
+        --nav-indicator-left: 0px;
+        --nav-indicator-width: 0px;
+        --nav-indicator-opacity: 0;
+        --nav-indicator-scale: 0;
+        position: relative;
         display: flex;
         width: min(930px, 100%);
         min-width: 0;
         justify-self: center;
+        align-self: stretch;
         align-items: center;
         gap: 4px;
         padding-inline: calc(var(--content-pad) - 9px) 10px;
@@ -669,6 +676,8 @@
       }
 
       .top-nav a {
+        position: relative;
+        z-index: 1;
         display: inline-flex;
         min-height: 44px;
         flex: 0 0 auto;
@@ -679,9 +688,30 @@
         font-weight: 650;
       }
 
+      .top-nav a[aria-current="page"] {
+        color: var(--color-text);
+      }
+
       .top-nav a:hover {
         color: var(--color-text);
         text-decoration: none;
+      }
+
+      .top-nav-indicator {
+        position: absolute;
+        bottom: -1px;
+        left: var(--nav-indicator-left);
+        width: var(--nav-indicator-width);
+        height: 2px;
+        border-radius: 999px;
+        background: var(--color-link);
+        opacity: var(--nav-indicator-opacity);
+        pointer-events: none;
+        transform: scaleX(var(--nav-indicator-scale));
+        transform-origin: center;
+        transition:
+          transform 150ms ease,
+          opacity 150ms ease;
       }
 
       .theme-toggle {
@@ -1064,13 +1094,13 @@
       @media (max-width: 680px) {
         .header-inner {
           position: relative;
-          grid-template-columns: 44px minmax(0, 1fr) 44px 44px;
+          grid-template-columns: minmax(140px, 1fr) 44px 44px;
           padding-inline: 0;
         }
 
         .site-brand {
-          justify-content: center;
-          padding: 0;
+          justify-content: flex-start;
+          padding-inline: 16px 8px;
         }
 
         .site-brand-full {
@@ -1085,6 +1115,7 @@
           position: absolute;
           top: calc(100% + 6px);
           right: 50px;
+          align-self: auto;
           display: flex;
           width: 210px;
           padding: 7px;
@@ -1107,6 +1138,15 @@
           background: var(--color-soft);
         }
 
+        .top-nav a[aria-current="page"] {
+          border-radius: 4px;
+          background: var(--color-soft);
+        }
+
+        .top-nav-indicator {
+          display: none;
+        }
+
         .js .top-nav {
           display: none;
         }
@@ -1117,19 +1157,20 @@
 
         .menu-toggle {
           display: inline-grid;
-          grid-column: 3;
+          grid-column: 2;
         }
 
         .theme-toggle {
-          grid-column: 4;
+          grid-column: 3;
         }
 
         .page {
-          display: block;
+          display: flex;
+          flex-direction: column;
         }
 
         .sidebar {
-          display: block;
+          display: contents;
           position: static;
           width: 100%;
           height: auto;
@@ -1139,6 +1180,7 @@
         }
 
         .profile {
+          order: 1;
           display: grid;
           grid-template-columns: 88px minmax(0, 1fr);
           grid-template-rows: auto auto auto auto auto;
@@ -1180,8 +1222,9 @@
         }
 
         .links-section {
+          order: 3;
           margin-top: 0;
-          padding: 0 22px 16px;
+          padding: 16px 22px 28px;
         }
 
         .links-section .section-label {
@@ -1195,12 +1238,37 @@
         }
 
         .content {
-          padding: 10px 22px 46px;
+          display: contents;
         }
 
         .content-section,
         .about-copy {
-          padding: 16px 0 28px;
+          padding: 16px 22px 28px;
+        }
+
+        .about-copy {
+          order: 2;
+        }
+
+        #news {
+          order: 4;
+        }
+
+        #selected-work {
+          order: 5;
+        }
+
+        #publications {
+          order: 6;
+        }
+
+        #awards {
+          order: 7;
+        }
+
+        #service {
+          order: 8;
+          padding-bottom: 46px;
         }
 
         .publication.selected {
@@ -1237,7 +1305,7 @@
         }
 
         .links-section,
-        .content {
+        .content-section {
           padding-right: 18px;
           padding-left: 18px;
         }
@@ -1263,9 +1331,9 @@
 
     <header class="site-header">
       <div class="header-inner">
-        <a class="site-brand" href="#about" aria-label="Homepage">
-          <span class="site-brand-full">Homepage</span>
-          <span class="site-brand-short" aria-hidden="true">HK</span>
+        <a class="site-brand" href="#about" aria-label="Hongbo Kang">
+          <span class="site-brand-full">Hongbo Kang</span>
+          <span class="site-brand-short" aria-hidden="true">Hongbo Kang</span>
         </a>
         <nav
           class="top-nav"
@@ -1277,7 +1345,8 @@
           <a href="#selected-work" aria-label="Selected Research">Selected Research</a>
           <a href="#publications" aria-label="Publications">Publications</a>
           <a href="#awards">Awards</a>
-          <a href="#service" aria-label="Service">Service</a>
+          <a href="#service">Academic Service</a>
+          <span class="top-nav-indicator" aria-hidden="true"></span>
         </nav>
         <button
           class="menu-toggle"
@@ -1887,8 +1956,20 @@
       const themeColor = document.querySelector('meta[name="theme-color"]');
       const menuToggle = document.querySelector(".menu-toggle");
       const topNav = document.querySelector(".top-nav");
+      const topNavLinks = Array.from(topNav.querySelectorAll('a[href^="#"]'));
+      const topNavIndicator = topNav.querySelector(".top-nav-indicator");
+      const topNavTargets = topNavLinks
+        .map((link) => ({
+          link,
+          section: document.querySelector(link.hash),
+        }))
+        .filter(({ section }) => section);
       const systemThemeQuery = window.matchMedia("(prefers-color-scheme: dark)");
       let manualTheme = null;
+      let navigationFrame = null;
+      let navigationFadeTimer = null;
+      let pendingNavigationHash = window.location.hash;
+      let pendingNavigationUntil = 0;
 
       function setTheme(theme) {
         const isDark = theme === "dark";
@@ -1925,6 +2006,155 @@
         menuToggle.setAttribute("aria-label", "Open navigation menu");
       }
 
+      function getHeaderOffset() {
+        return (
+          Number.parseFloat(
+            getComputedStyle(document.documentElement).getPropertyValue(
+              "--header-height",
+            ),
+          ) || 56
+        );
+      }
+
+      function isSectionVisible(section) {
+        const rect = section.getBoundingClientRect();
+        return rect.bottom > getHeaderOffset() && rect.top < window.innerHeight;
+      }
+
+      function getNavigationTargetByHash(hash) {
+        if (!hash) {
+          return null;
+        }
+
+        return topNavTargets.find(({ link }) => link.hash === hash) ?? null;
+      }
+
+      function applyNavigationIndicatorPosition(activeLink) {
+        if (!activeLink) {
+          topNav.style.setProperty("--nav-indicator-opacity", "0");
+          topNav.style.setProperty("--nav-indicator-scale", "0");
+          return;
+        }
+
+        const navRect = topNav.getBoundingClientRect();
+        const linkRect = activeLink.getBoundingClientRect();
+        const left = linkRect.left - navRect.left + topNav.scrollLeft;
+        topNav.style.setProperty("--nav-indicator-left", `${left}px`);
+        topNav.style.setProperty("--nav-indicator-width", `${linkRect.width}px`);
+        topNav.style.setProperty("--nav-indicator-scale", "1");
+        topNav.style.setProperty("--nav-indicator-opacity", "1");
+      }
+
+      function updateNavigationIndicator(activeLink) {
+        if (navigationFadeTimer !== null) {
+          window.clearTimeout(navigationFadeTimer);
+          navigationFadeTimer = null;
+        }
+
+        if (!activeLink || !topNavIndicator) {
+          topNav.style.setProperty("--nav-indicator-opacity", "0");
+          topNav.style.setProperty("--nav-indicator-scale", "0");
+          return;
+        }
+
+        const navRect = topNav.getBoundingClientRect();
+        const linkRect = activeLink.getBoundingClientRect();
+        const left = linkRect.left - navRect.left + topNav.scrollLeft;
+        const nextLeft = `${left}px`;
+        const nextWidth = `${linkRect.width}px`;
+        const currentLeft = topNav.style.getPropertyValue("--nav-indicator-left");
+        const currentWidth = topNav.style.getPropertyValue("--nav-indicator-width");
+        const isVisible =
+          topNav.style.getPropertyValue("--nav-indicator-opacity") === "1";
+        const hasMoved =
+          isVisible && (currentLeft !== nextLeft || currentWidth !== nextWidth);
+
+        if (hasMoved) {
+          topNav.style.setProperty("--nav-indicator-scale", "0");
+          topNav.style.setProperty("--nav-indicator-opacity", "0");
+          navigationFadeTimer = window.setTimeout(() => {
+            const navRectAfterShrink = topNav.getBoundingClientRect();
+            const linkRectAfterShrink = activeLink.getBoundingClientRect();
+            const leftAfterShrink =
+              linkRectAfterShrink.left - navRectAfterShrink.left + topNav.scrollLeft;
+            topNav.style.setProperty(
+              "--nav-indicator-left",
+              `${leftAfterShrink}px`,
+            );
+            topNav.style.setProperty(
+              "--nav-indicator-width",
+              `${linkRectAfterShrink.width}px`,
+            );
+            requestAnimationFrame(() => {
+              topNav.style.setProperty("--nav-indicator-scale", "1");
+              topNav.style.setProperty("--nav-indicator-opacity", "1");
+            });
+            navigationFadeTimer = null;
+          }, 150);
+          return;
+        }
+
+        applyNavigationIndicatorPosition(activeLink);
+      }
+
+      function setActiveNavigation(activeLink) {
+        if (!activeLink) {
+          return;
+        }
+
+        for (const link of topNavLinks) {
+          if (link === activeLink) {
+            link.setAttribute("aria-current", "page");
+          } else {
+            link.removeAttribute("aria-current");
+          }
+        }
+
+        updateNavigationIndicator(activeLink);
+      }
+
+      function getCurrentNavigationLink() {
+        const hashTarget = getNavigationTargetByHash(window.location.hash);
+        if (hashTarget && isSectionVisible(hashTarget.section)) {
+          pendingNavigationHash = null;
+          return hashTarget.link;
+        }
+
+        const pendingTarget = getNavigationTargetByHash(pendingNavigationHash);
+        if (pendingTarget && Date.now() < pendingNavigationUntil) {
+          return pendingTarget.link;
+        }
+
+        const headerOffset = getHeaderOffset();
+        const activationLine = headerOffset + 96;
+        let currentLink = topNavTargets[0]?.link;
+        let bestDistance = Number.POSITIVE_INFINITY;
+
+        for (const { link, section } of topNavTargets) {
+          const sectionTop = section.getBoundingClientRect().top;
+          const distance = Math.abs(sectionTop - activationLine);
+          if (distance < bestDistance) {
+            bestDistance = distance;
+            currentLink = link;
+          }
+        }
+
+        return currentLink;
+      }
+
+      function syncActiveNavigation() {
+        navigationFrame = null;
+        setActiveNavigation(getCurrentNavigationLink());
+      }
+
+      function scheduleActiveNavigationSync() {
+        if (navigationFrame !== null) {
+          return;
+        }
+
+        navigationFrame = requestAnimationFrame(syncActiveNavigation);
+      }
+
       menuToggle.addEventListener("click", () => {
         const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
         topNav.dataset.open = String(!isOpen);
@@ -1936,9 +2166,19 @@
       });
 
       topNav.addEventListener("click", (event) => {
-        if (event.target.closest("a")) {
+        const activeLink = event.target.closest("a");
+        if (activeLink) {
+          pendingNavigationHash = activeLink.hash;
+          pendingNavigationUntil = Date.now() + 1600;
+          setActiveNavigation(activeLink);
           closeNavigation();
         }
+      });
+
+      topNav.addEventListener("scroll", () => {
+        applyNavigationIndicatorPosition(
+          topNav.querySelector('a[aria-current="page"]'),
+        );
       });
 
       document.addEventListener("click", (event) => {
@@ -1958,6 +2198,17 @@
       });
 
       applySystemTheme();
+      syncActiveNavigation();
+      window.addEventListener("scroll", scheduleActiveNavigationSync, {
+        passive: true,
+      });
+      window.addEventListener("resize", scheduleActiveNavigationSync);
+      window.addEventListener("hashchange", () => {
+        pendingNavigationHash = window.location.hash;
+        pendingNavigationUntil = Date.now() + 1600;
+        scheduleActiveNavigationSync();
+      });
+      window.addEventListener("load", scheduleActiveNavigationSync);
     </script>
   </body>
 </html>

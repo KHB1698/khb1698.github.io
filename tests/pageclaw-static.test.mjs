@@ -72,13 +72,40 @@ test("ships accessible minimal interactions", async () => {
   assert.match(html, /html\s*\{[\s\S]*?font-size:\s*15px;/);
   assert.match(html, /body\s*\{[\s\S]*?font-size:\s*1rem;/);
   assert.match(html, /<header class="site-header">/);
-  assert.match(html, /<span class="site-brand-full">Homepage<\/span>/);
+  assert.match(html, /<a class="site-brand" href="#about" aria-label="Hongbo Kang">/);
+  assert.match(html, /\.site-brand\s*\{[\s\S]*?white-space:\s*nowrap;/);
+  assert.match(html, /<span class="site-brand-full">Hongbo Kang<\/span>/);
+  assert.match(html, /<span class="site-brand-short" aria-hidden="true">Hongbo Kang<\/span>/);
+  assert.doesNotMatch(html, /Hongbo Kang\/3D Vision/);
+  assert.doesNotMatch(html, /<span class="site-brand-full">Homepage<\/span>/);
   assert.doesNotMatch(html, /<span class="site-brand-full">Hongbo Kang's Homepage<\/span>/);
+  assert.doesNotMatch(html, /<span class="site-brand-short" aria-hidden="true">HK<\/span>/);
   assert.match(html, /<a href="#about-content">About Me<\/a>/);
   assert.match(
     html,
     /<nav\s+class="top-nav"\s+id="primary-navigation"\s+aria-label="Primary navigation"\s*>/,
   );
+  assert.match(html, /<span class="top-nav-indicator" aria-hidden="true"><\/span>/);
+  assert.match(html, /\.top-nav\s*\{[\s\S]*?align-self:\s*stretch;/);
+  assert.match(html, /\.top-nav a\[aria-current="page"\]\s*\{[\s\S]*?color:\s*var\(--color-text\);/);
+  assert.match(
+    html,
+    /\.top-nav-indicator\s*\{[\s\S]*?bottom:\s*-1px;[\s\S]*?left:\s*var\(--nav-indicator-left\);[\s\S]*?transform:\s*scaleX\(var\(--nav-indicator-scale\)\);[\s\S]*?transform-origin:\s*center;[\s\S]*?transform 150ms ease,[\s\S]*?opacity 150ms ease;/,
+  );
+  assert.doesNotMatch(html, /translateX\(var\(--nav-indicator-left\)\)|transform 220ms ease|width 220ms ease/);
+  assert.match(html, /function setActiveNavigation\(activeLink\)/);
+  assert.match(html, /function syncActiveNavigation\(\)/);
+  assert.match(html, /function isSectionVisible\(section\)/);
+  assert.match(html, /function getNavigationTargetByHash\(hash\)/);
+  assert.match(html, /let pendingNavigationHash = window\.location\.hash;/);
+  assert.match(html, /pendingNavigationUntil = Date\.now\(\) \+ 1600;/);
+  assert.match(html, /--nav-indicator-scale", "0"/);
+  assert.match(html, /--nav-indicator-scale", "1"/);
+  assert.match(html, /requestAnimationFrame\(\(\) => \{/);
+  assert.match(html, /let bestDistance = Number\.POSITIVE_INFINITY;/);
+  assert.match(html, /const distance = Math\.abs\(sectionTop - activationLine\);/);
+  assert.match(html, /link\.setAttribute\("aria-current", "page"\)/);
+  assert.match(html, /window\.addEventListener\("hashchange", \(\) => \{/);
   assert.match(html, /class="menu-toggle"/);
   assert.match(html, /aria-controls="primary-navigation"/);
   assert.match(html, /aria-expanded="false"/);
@@ -90,7 +117,7 @@ test("ships accessible minimal interactions", async () => {
     html,
     /<a href="#publications"\s+aria-label="Publications">Publications<\/a>/,
   );
-  assert.match(html, /<a href="#service"\s+aria-label="Service">Service<\/a>/);
+  assert.match(html, /<a href="#service">Academic Service<\/a>/);
   assert.doesNotMatch(html, /class="nav-(?:full|short)"/);
   assert.doesNotMatch(html, />Pubs<\/span>|>Svc<\/span>/);
   assert.match(html, /<aside class="sidebar"/);
@@ -124,6 +151,21 @@ test("ships accessible minimal interactions", async () => {
   assert.match(html, /\.sidebar\s*\{[\s\S]*?position:\s*sticky/i);
   assert.match(html, /\.portrait-wrapper\s*\{[\s\S]*?align-self:\s*start;/);
   assert.match(html, /@media \(max-width:\s*680px\)/i);
+  const narrowStylesStart = html.indexOf("@media (max-width: 680px)");
+  const narrowStylesEnd = html.indexOf("@media (max-width: 520px)");
+  assert.ok(narrowStylesStart >= 0);
+  assert.ok(narrowStylesEnd > narrowStylesStart);
+  const narrowStyles = html.slice(narrowStylesStart, narrowStylesEnd);
+  assert.match(
+    narrowStyles,
+    /\.page\s*\{[\s\S]*?display:\s*flex;[\s\S]*?flex-direction:\s*column;/,
+  );
+  assert.match(narrowStyles, /\.sidebar\s*\{[\s\S]*?display:\s*contents;/);
+  assert.match(narrowStyles, /\.content\s*\{[\s\S]*?display:\s*contents;/);
+  assert.match(narrowStyles, /\.profile\s*\{[\s\S]*?order:\s*1;/);
+  assert.match(narrowStyles, /\.about-copy\s*\{[\s\S]*?order:\s*2;/);
+  assert.match(narrowStyles, /\.links-section\s*\{[\s\S]*?order:\s*3;/);
+  assert.match(narrowStyles, /#news\s*\{[\s\S]*?order:\s*4;/);
   assert.match(
     html,
     /<h2 class="section-label" id="publications-title">Publications<\/h2>/,
