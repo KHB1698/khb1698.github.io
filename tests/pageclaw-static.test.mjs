@@ -60,6 +60,14 @@ test("preserves the PageClaw section order and complete research record", async 
   );
   assert.doesNotMatch(news, /[📍🏆🎉📌]/u);
   assert.doesNotMatch(news, />…<\/span>/u);
+  assert.match(
+    news,
+    /<strong class="news-highlight">Highlight<\/strong>/,
+  );
+  assert.match(
+    html,
+    /:root\s*\{[\s\S]*?--color-news-highlight:\s*#b42318;[\s\S]*?\.news-highlight\s*\{[\s\S]*?color:\s*var\(--color-news-highlight\);/,
+  );
   assert.doesNotMatch(
     html,
     /\.service-list li\s*\{[^}]*border-bottom:/,
@@ -158,11 +166,11 @@ test("ships accessible minimal interactions", async () => {
   );
   assert.match(
     html,
-    /:root\s*\{[\s\S]*?--color-highlight-bg:\s*#fff3d6;[\s\S]*?--color-highlight-text:\s*#7a4300;/i,
+    /:root\s*\{[\s\S]*?--color-highlight-bg:\s*#fbe9e7;[\s\S]*?--color-highlight-text:\s*#b42318;/i,
   );
   assert.match(
     html,
-    /html\[data-theme="dark"\]\s*\{[\s\S]*?--color-rule:\s*#46515a;[\s\S]*?--color-highlight-bg:\s*#44351f;[\s\S]*?--color-highlight-text:\s*#f1c77a;/i,
+    /html\[data-theme="dark"\]\s*\{[\s\S]*?--color-rule:\s*#46515a;[\s\S]*?--color-highlight-bg:\s*#4a2222;[\s\S]*?--color-highlight-text:\s*#ffb4ab;/i,
   );
   assert.match(
     html,

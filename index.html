@@ -40,8 +40,9 @@
         --color-tag: #eef4fa;
         --color-tag-primary: #285f8d;
         --color-tag-primary-text: #ffffff;
-        --color-highlight-bg: #fff3d6;
-        --color-highlight-text: #7a4300;
+        --color-highlight-bg: #fbe9e7;
+        --color-highlight-text: #b42318;
+        --color-news-highlight: #b42318;
         --color-focus: #1d5d92;
         --radius: 8px;
         --sidebar-width: 280px;
@@ -287,6 +288,10 @@
 
       .news-text {
         min-width: 0;
+      }
+
+      .news-highlight {
+        color: var(--color-news-highlight);
       }
 
       .publication-group-title {
@@ -606,8 +611,8 @@
         --color-tag: #1d3446;
         --color-tag-primary: #376f99;
         --color-tag-primary-text: #ffffff;
-        --color-highlight-bg: #44351f;
-        --color-highlight-text: #f1c77a;
+        --color-highlight-bg: #4a2222;
+        --color-highlight-text: #ffb4ab;
         --color-focus: #8fc4ee;
         color-scheme: dark;
       }
@@ -1521,7 +1526,7 @@
           </li>
           <li class="news-item">
             <time class="news-date" datetime="2025-07">2025.07</time>
-            <span class="news-text">Our paper “RESCUE: Crowd Evacuation Simulation via Controlling SDM-United Characters” has been accepted to <strong>ICCV</strong> as <strong>Highlight</strong>!</span>
+            <span class="news-text">Our paper “RESCUE: Crowd Evacuation Simulation via Controlling SDM-United Characters” has been accepted to <strong>ICCV</strong> as <strong class="news-highlight">Highlight</strong>!</span>
           </li>
           <li class="news-item">
             <time class="news-date" datetime="2025-05">2025.05</time>
