@@ -40,12 +40,14 @@
         --color-tag: #eef4fa;
         --color-tag-primary: #285f8d;
         --color-tag-primary-text: #ffffff;
-        --color-highlight-bg: #fbe9e7;
-        --color-highlight-text: #b42318;
+        --color-highlight-bg: #fff3d6;
+        --color-highlight-text: #7a4300;
         --color-focus: #1d5d92;
         --radius: 8px;
         --sidebar-width: 280px;
         --content-pad: clamp(32px, 6vw, 76px);
+        --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+        --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
         color-scheme: light;
       }
 
@@ -215,15 +217,15 @@
         padding-bottom: 12px;
         border-bottom: 1px solid var(--color-rule);
         color: var(--color-text);
-        font-size: 0.75rem;
+        font-size: 0.78rem;
         font-weight: 700;
-        letter-spacing: 0.12em;
+        letter-spacing: 0.1em;
         line-height: 1.3;
         text-transform: uppercase;
       }
 
       .about-copy p {
-        max-width: 76ch;
+        max-width: 72ch;
         margin: 0 0 18px;
         font-size: clamp(1.02rem, 0.45vw + 0.94rem, 1.14rem);
         line-height: 1.72;
@@ -278,7 +280,7 @@
       .news-date {
         color: var(--color-muted);
         font-size: 0.84rem;
-        font-weight: 650;
+        font-weight: 600;
         font-variant-numeric: tabular-nums;
         white-space: nowrap;
       }
@@ -385,7 +387,7 @@
         gap: 6px 14px;
         margin: 14px 0 0;
         font-size: 0.88rem;
-        font-weight: 650;
+        font-weight: 600;
       }
 
       .publication-links a {
@@ -404,7 +406,7 @@
 
       .publication-inline-links {
         font-style: normal;
-        font-weight: 650;
+        font-weight: 600;
         white-space: normal;
       }
 
@@ -488,7 +490,7 @@
       .award-date {
         color: var(--color-muted);
         font-size: 0.84rem;
-        font-weight: 650;
+        font-weight: 600;
         font-variant-numeric: tabular-nums;
       }
 
@@ -599,13 +601,13 @@
         --color-muted: #b6bbc2;
         --color-link: #83b6df;
         --color-link-hover: #acd2f0;
-        --color-rule: #52606a;
+        --color-rule: #46515a;
         --color-soft: #202428;
         --color-tag: #1d3446;
         --color-tag-primary: #376f99;
         --color-tag-primary-text: #ffffff;
-        --color-highlight-bg: #4a2222;
-        --color-highlight-text: #ffb4ab;
+        --color-highlight-bg: #44351f;
+        --color-highlight-text: #f1c77a;
         --color-focus: #8fc4ee;
         color-scheme: dark;
       }
@@ -639,7 +641,7 @@
         padding-inline: 28px;
         color: var(--color-muted);
         font-size: 0.9rem;
-        font-weight: 750;
+        font-weight: 700;
         letter-spacing: -0.01em;
         white-space: nowrap;
       }
@@ -684,8 +686,8 @@
         align-items: center;
         padding-inline: 9px;
         color: var(--color-muted);
-        font-size: 0.78rem;
-        font-weight: 650;
+        font-size: 0.84rem;
+        font-weight: 600;
       }
 
       .top-nav a[aria-current="page"] {
@@ -710,8 +712,8 @@
         transform: scaleX(var(--nav-indicator-scale));
         transform-origin: center;
         transition:
-          transform 150ms ease,
-          opacity 150ms ease;
+          transform 150ms var(--ease-out),
+          opacity 120ms var(--ease-out);
       }
 
       .theme-toggle {
@@ -740,9 +742,19 @@
         cursor: pointer;
       }
 
-      .menu-toggle:hover {
+      .menu-toggle,
+      .theme-toggle {
+        transition:
+          background-color 160ms ease,
+          color 160ms ease,
+          transform 140ms var(--ease-out);
+      }
+
+      .menu-toggle:active,
+      .theme-toggle:active {
         background: var(--color-soft);
         color: var(--color-text);
+        transform: scale(0.97);
       }
 
       .menu-toggle:focus-visible {
@@ -758,9 +770,12 @@
         stroke-width: 1.7;
       }
 
-      .theme-toggle:hover {
-        background: var(--color-soft);
-        color: var(--color-text);
+      @media (hover: hover) and (pointer: fine) {
+        .menu-toggle:hover,
+        .theme-toggle:hover {
+          background: var(--color-soft);
+          color: var(--color-text);
+        }
       }
 
       .theme-toggle:focus-visible {
@@ -844,14 +859,15 @@
         font-weight: 700;
         line-height: 1.4;
         white-space: nowrap;
-        animation: greeting-shake 600ms ease-in-out 700ms 1 both;
-        transition: transform 160ms ease;
+        animation: greeting-shake 600ms var(--ease-in-out) 700ms 1 both;
+        transition: transform 160ms var(--ease-out);
       }
 
-      .portrait-wrapper:hover .avatar-greeting,
-      .portrait-wrapper:focus-within .avatar-greeting {
-        --greeting-scale: 1.08;
-        animation: greeting-shake 520ms ease-in-out infinite;
+      @media (hover: hover) and (pointer: fine) {
+        .portrait-wrapper:hover .avatar-greeting {
+          animation: none;
+          transform: scale(1.05);
+        }
       }
 
       @keyframes greeting-shake {
@@ -1018,7 +1034,7 @@
       .tag {
         min-height: 23px;
         padding: 3px 8px;
-        font-size: 0.68rem;
+        font-size: 0.72rem;
       }
 
       .publication-title {
@@ -1515,10 +1531,6 @@
             <time class="news-date" datetime="2024-09">2024.09</time>
             <span class="news-text">I started my Ph.D. in Prof. <a href="https://cic.tju.edu.cn/faculty/likun/index.html">Kun Li</a>’s team at Tianjin University.</span>
           </li>
-          <li class="news-item">
-            <span class="news-date" aria-hidden="true">…</span>
-            <span class="news-text">…</span>
-          </li>
         </ul>
       </section>
 
@@ -1979,7 +1991,7 @@
           "aria-label",
           isDark ? "Switch to light theme" : "Switch to dark theme",
         );
-        themeColor.setAttribute("content", isDark ? "#151719" : "#ffffff");
+        themeColor.setAttribute("content", isDark ? "#2d353b" : "#ffffff");
       }
 
       function getSystemTheme() {

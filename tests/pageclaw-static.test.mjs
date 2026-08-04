@@ -59,6 +59,7 @@ test("preserves the PageClaw section order and complete research record", async 
     html.indexOf('id="selected-work"', html.indexOf('id="news"')),
   );
   assert.doesNotMatch(news, /[📍🏆🎉📌]/u);
+  assert.doesNotMatch(news, />…<\/span>/u);
   assert.doesNotMatch(
     html,
     /\.service-list li\s*\{[^}]*border-bottom:/,
@@ -90,7 +91,7 @@ test("ships accessible minimal interactions", async () => {
   assert.match(html, /\.top-nav a\[aria-current="page"\]\s*\{[\s\S]*?color:\s*var\(--color-text\);/);
   assert.match(
     html,
-    /\.top-nav-indicator\s*\{[\s\S]*?bottom:\s*-1px;[\s\S]*?left:\s*var\(--nav-indicator-left\);[\s\S]*?transform:\s*scaleX\(var\(--nav-indicator-scale\)\);[\s\S]*?transform-origin:\s*center;[\s\S]*?transform 150ms ease,[\s\S]*?opacity 150ms ease;/,
+    /\.top-nav-indicator\s*\{[\s\S]*?bottom:\s*-1px;[\s\S]*?left:\s*var\(--nav-indicator-left\);[\s\S]*?transform:\s*scaleX\(var\(--nav-indicator-scale\)\);[\s\S]*?transform-origin:\s*center;[\s\S]*?transform 150ms var\(--ease-out\),[\s\S]*?opacity 120ms var\(--ease-out\);/,
   );
   assert.doesNotMatch(html, /translateX\(var\(--nav-indicator-left\)\)|transform 220ms ease|width 220ms ease/);
   assert.match(html, /function setActiveNavigation\(activeLink\)/);
@@ -125,7 +126,19 @@ test("ships accessible minimal interactions", async () => {
     html,
     /<div class="portrait-wrapper"[^>]*>[\s\S]*?<span class="avatar-greeting" aria-hidden="true">🙌 Hi!<\/span>/,
   );
-  assert.match(html, /animation:\s*greeting-shake 600ms ease-in-out 700ms 1 both;/);
+  assert.match(
+    html,
+    /animation:\s*greeting-shake 600ms var\(--ease-in-out\) 700ms 1 both;/,
+  );
+  assert.match(
+    html,
+    /@media \(hover: hover\) and \(pointer: fine\)\s*\{[\s\S]*?\.portrait-wrapper:hover \.avatar-greeting\s*\{[\s\S]*?animation:\s*none;[\s\S]*?transform:\s*scale\(1\.05\);/,
+  );
+  assert.doesNotMatch(html, /greeting-shake[^;]*infinite/);
+  assert.match(
+    html,
+    /\.menu-toggle:active,[\s\S]*?\.theme-toggle:active\s*\{[\s\S]*?transform:\s*scale\(0\.97\);/,
+  );
   assert.match(html, /class="theme-toggle"/);
   assert.match(html, /aria-label="Toggle color theme"/);
   assert.match(html, /systemThemeQuery\.addEventListener\("change", applySystemTheme\)/);
@@ -142,6 +155,18 @@ test("ships accessible minimal interactions", async () => {
   assert.match(
     html,
     /html\[data-theme="dark"\]\s*\{[\s\S]*?--color-page:\s*#2d353b;[\s\S]*?--color-sidebar:\s*#2d353b;/i,
+  );
+  assert.match(
+    html,
+    /:root\s*\{[\s\S]*?--color-highlight-bg:\s*#fff3d6;[\s\S]*?--color-highlight-text:\s*#7a4300;/i,
+  );
+  assert.match(
+    html,
+    /html\[data-theme="dark"\]\s*\{[\s\S]*?--color-rule:\s*#46515a;[\s\S]*?--color-highlight-bg:\s*#44351f;[\s\S]*?--color-highlight-text:\s*#f1c77a;/i,
+  );
+  assert.match(
+    html,
+    /themeColor\.setAttribute\("content", isDark \? "#2d353b" : "#ffffff"\);/,
   );
   assert.match(html, /--sidebar-width:\s*250px/i);
   assert.match(
