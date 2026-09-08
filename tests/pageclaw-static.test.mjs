@@ -26,6 +26,7 @@ test("preserves the PageClaw section order and complete research record", async 
   for (const required of [
     "Hongbo Kang (康洪菠)",
     "Ph.D. Candidate · @TJU",
+    "TriadFormer: Structure-Guided Kinematic State Space Learning for 3D Human Pose Estimation",
     "Crowd4D: Scene-Aware Monocular 4D Crowd Reconstruction",
     "AnnyCrowd: Mixed-Age Crowd Reconstruction from a Single Image",
     "DRPose: A Diffusion-based Pose Refinement Framework for 3D Human Pose Estimation",
@@ -283,7 +284,7 @@ test("contains all publication disclosures and source links", async () => {
   );
   assert.doesNotMatch(html, /<p class="publication-note">/);
   assert.equal((html.match(/\(\* Equal Contribution\)/g) ?? []).length, 8);
-  assert.ok((html.match(/class="publication-inline-links"/g) ?? []).length >= 11);
+  assert.ok((html.match(/class="publication-inline-links"/g) ?? []).length >= 12);
 
   const allPublications = html.slice(
     html.indexOf('<div class="all-publications">'),
@@ -294,12 +295,12 @@ test("contains all publication disclosures and source links", async () => {
   );
   assert.equal(
     (allPublications.match(/<article class="publication">/g) ?? []).length,
-    12,
+    13,
   );
   const compactVenues = [
     ...allPublications.matchAll(/<p class="venue">[\s\S]*?<\/p>/g),
   ];
-  assert.equal(compactVenues.length, 12);
+  assert.equal(compactVenues.length, 13);
   for (const venue of compactVenues) {
     assert.doesNotMatch(venue[0], /·\s*(?:CCF-[ABC]|Highlight)/);
   }
@@ -314,6 +315,7 @@ test("contains all publication disclosures and source links", async () => {
   }
   assert.doesNotMatch(allPublications, /publication-timeline|Publication timeline/);
   const chronologicalTitles = [
+    "TriadFormer: Structure-Guided Kinematic State Space Learning for 3D Human Pose Estimation",
     "AnnyCrowd: Mixed-Age Crowd Reconstruction from a Single Image",
     "Crowd4D: Scene-Aware Monocular 4D Crowd Reconstruction",
     "MuRE: Multi-Relationship Encoder for 3D Human Pose Estimation",
@@ -377,6 +379,7 @@ test("contains all publication disclosures and source links", async () => {
     2,
   );
   assert.doesNotMatch(html, /icml\.cc\/virtual\/2026\/poster\/65335/);
+  assert.match(html, /https:\/\/ssrn\.com\/abstract=7181664/);
   assert.match(html, /https:\/\/github\.com\/KHB1698\/DyCrowd/);
   assert.match(html, /https:\/\/github\.com\/xiaolin0314\/RESCUE/);
   assert.match(html, /https:\/\/orcid\.org\/0000-0001-5771-3886/);
