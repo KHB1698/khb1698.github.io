@@ -240,6 +240,25 @@
         margin-bottom: 0;
       }
 
+      .school-prefix {
+        white-space: nowrap;
+      }
+
+      .school-crest {
+        display: inline-block;
+        width: 1.3em;
+        height: 1.3em;
+        margin-right: 0.28em;
+        vertical-align: -0.25em;
+        object-fit: contain;
+      }
+
+      html[data-theme="dark"] .school-crest--seal {
+        padding: 1px;
+        border-radius: 50%;
+        background: #ffffff;
+      }
+
       .link-list,
       .news-list,
       .award-list,
@@ -1474,15 +1493,15 @@
           <h2 class="section-label" id="about-title">About Me</h2>
           <p>
             I am <strong>Hongbo Kang (康洪菠)</strong>, a Ph.D. candidate at
-            Tianjin University advised by Prof.
+            <span class="school-prefix"><img class="school-crest school-crest--seal" src="imgs/tju-crest.png" alt="" width="20" height="20" />Tianjin</span> University advised by Prof.
             <a href="https://cic.tju.edu.cn/faculty/likun/index.html">Kun Li</a>.
-            I will visit Cardiff University for one year, with Prof.
+            I will visit <span class="school-prefix"><img class="school-crest" src="imgs/cardiff-crest.png" alt="" width="20" height="20" />Cardiff</span> University for one year, with Prof.
             <a href="https://yukunlai.github.io/">Yu-Kun Lai</a> as my host
             supervisor.
-            I earned my master's at Chongqing University of Technology (2024),
+            I earned my master's at <span class="school-prefix"><img class="school-crest school-crest--seal" src="imgs/cqut-crest.png" alt="" width="20" height="20" />Chongqing</span> University of Technology (2024),
             advised by Profs. Yong Wang and
             <a href="https://www.sigs.tsinghua.edu.cn/ywm_en/main.psp">Wenming Yang</a>
-            (Tsinghua University). My research focuses on
+            (<span class="school-prefix"><img class="school-crest school-crest--seal" src="imgs/tsinghua-crest.png" alt="" width="20" height="20" />Tsinghua</span> University). My research focuses on
             <strong>human-centered 3D reconstruction and generation</strong>,
             with an emphasis on perceiving, modeling, and simulating humans in
             complex scenes. I work on individual and crowd reconstruction,
