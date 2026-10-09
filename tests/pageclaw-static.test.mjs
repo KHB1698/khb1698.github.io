@@ -43,7 +43,7 @@ test("preserves the PageClaw section order and complete research record", async 
     "US20260073606A1",
     "China Scholarship Council (CSC) Scholarship",
     "Conference Reviewer",
-    "CVPR, AAAI, MM, SIGGRAPH Asia, ICLR, CICAI, etc.",
+    "CVPR, ICLR, AAAI, MM, SIGGRAPH Asia, CICAI, etc.",
   ]) {
     assert.match(html, new RegExp(escapeRegExp(required)));
   }
