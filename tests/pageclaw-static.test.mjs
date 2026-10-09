@@ -16,6 +16,7 @@ test("preserves the PageClaw section order and complete research record", async 
     'id="news"',
     'id="selected-work"',
     'id="publications"',
+    'id="patents"',
     'id="awards"',
     'id="service"',
   ];
@@ -38,6 +39,8 @@ test("preserves the PageClaw section order and complete research record", async 
     "DBMambaPose: Decoupled Spatial-Temporal Bidirectional State Space Model for Efficient 3D Human Pose Estimation",
     "ICFNet: Interactive-complementary fusion network for monocular 3D human pose estimation",
     "Hierarchical flow learning for low-light image enhancement",
+    "Method for dynamic 3D crowd reconstruction from a large-scene video",
+    "US20260073606A1",
     "China Scholarship Council (CSC) Scholarship",
     "Conference Reviewer",
     "CVPR, AAAI, MM, SIGGRAPH Asia, etc.",
@@ -288,7 +291,7 @@ test("contains all publication disclosures and source links", async () => {
   const allPublications = html.slice(
     html.indexOf('<div class="all-publications">'),
     html.indexOf(
-      '<section class="content-section" id="awards"',
+      '<section class="content-section" id="patents"',
       html.indexOf('<div class="all-publications">'),
     ),
   );
@@ -379,6 +382,13 @@ test("contains all publication disclosures and source links", async () => {
   assert.doesNotMatch(html, /icml\.cc\/virtual\/2026\/poster\/65335/);
   assert.match(html, /https:\/\/github\.com\/KHB1698\/DyCrowd/);
   assert.match(html, /https:\/\/github\.com\/xiaolin0314\/RESCUE/);
+  const patents = html.slice(
+    html.indexOf('<section class="content-section" id="patents"'),
+    html.indexOf('<section class="content-section" id="awards"'),
+  );
+  assert.match(patents, /image-ppubs\.uspto\.gov\/dirsearch-public\/print\/downloadPdf\/20260073606/);
+  assert.doesNotMatch(patents, /patentcenter\.uspto\.gov/);
+  assert.doesNotMatch(patents, /patents\.google\.com/);
   assert.match(html, /https:\/\/orcid\.org\/0000-0001-5771-3886/);
   assert.match(html, /mailto:hbkang@tju\.edu\.cn/);
 });
